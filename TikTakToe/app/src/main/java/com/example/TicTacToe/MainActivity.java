@@ -1,11 +1,8 @@
-package com.example.TikTakToe;
-import java.lang.reflect.Array;
-import java.util.*;
+package com.example.TicTacToe;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +10,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public static int defColor;
+    public boolean xTurn = true;
+    public ArrayList<Integer> xList = new ArrayList<>();
+    public ArrayList<Integer> oList = new ArrayList<>();
+    public ArrayList<int[]> winList = new ArrayList<>();
+    public ArrayList<Integer> allButtons = new ArrayList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +51,6 @@ public class MainActivity extends AppCompatActivity {
         allButtons.add(R.id.button13);
     }
 
-    public boolean xTurn = true;
-    public ArrayList<Integer> xList = new ArrayList<>();
-    public ArrayList<Integer> oList = new ArrayList<>();
-    public ArrayList<int[]> winList = new ArrayList<>();
-
     public void click(View input) {
         Button v = (Button) input;
         if (xTurn) {
@@ -86,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
     }
-    public ArrayList<Integer> allButtons = new ArrayList();
-    public boolean checkWin(){
+
+    private boolean checkWin(){
         boolean butFound = false;
         //check x win
         for (int i = 0; i < winList.size(); i++) {
