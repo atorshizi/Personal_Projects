@@ -3,6 +3,7 @@ This repository contains the personal coding projects I have completed. A brief 
 
 
 TicTacToe:
+
 This folder contains all of the files used to create an Android app of the classic TicTacToe game. The main code can be found under...
 
 
