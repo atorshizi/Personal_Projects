@@ -48,7 +48,7 @@
         android:layout_height="100dp"
         android:backgroundTint="#3A3A3A"
         android:onClick="click"
-        android:text="Press to Play"
+        android:text="Press to Choose"
         android:textColor="#88ffffff"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
