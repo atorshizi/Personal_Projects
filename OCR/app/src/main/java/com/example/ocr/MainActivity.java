@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
 
         Window statBar = getWindow();
-        statBar.setStatusBarColor(getResources().getColor(R.color.theme_color));
+        statBar.setStatusBarColor(0x00000000);
+        TextView text = findViewById(R.id.textView2);
+        text.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
         if ((ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)){
             ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
