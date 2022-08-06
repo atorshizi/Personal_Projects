@@ -15,5 +15,5 @@ app/src/main/res/layout/activity_main.xml
 (https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/res/layout/activity_main.xml)
 
 
-app/build/outputs/apk/debug/app-debug.apk___
+app/build/outputs/apk/debug/app-debug.apk\
 (https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/TicTacToe.apk)
