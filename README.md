@@ -1,6 +1,6 @@
 # Personal_Projects
 This repository contains the personal coding projects I have completed. A brief description of each project can be found below.
-
+\n
 
 
 TicTacToe:
