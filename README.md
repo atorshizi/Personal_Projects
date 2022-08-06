@@ -21,7 +21,7 @@ app/TicTacToe.apk\
 
 OCR:
 
-This folder contains all of the files that was used to create an android app that incorporates the Google ML Kit and can recognize text in images from either existing images or new images taken from the camera. The main code can be found under...
+This folder contains all of the files that was used to create an android app that incorporates the Google ML Kit and can recognize text in images from either existing images or new images taken from the camera - Optical Character Recognition (OCR). The main code can be found under...
 
 
 app/src/main/java/com/example/ocr/MainActivity.java\
