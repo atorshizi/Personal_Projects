@@ -33,4 +33,4 @@ app/src/main/res/layout/activity_main.xml\
 
 
 app/OCR.apk\
-(https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/TicTacToe.apk)
+(https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
