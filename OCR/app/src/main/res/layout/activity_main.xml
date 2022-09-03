@@ -80,7 +80,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CHOOSE AN EXISTING IMAGE OR TAKE A NEW IMAGE TO SCAN TEXT \n\nTAKE A PICTURE TO SCAN BARCODE/QR CODE"
+                android:text="CHOOSE AN EXISTING IMAGE OR TAKE A NEW IMAGE TO SCAN TEXT \n\nOR \n\nTAKE A PICTURE TO SCAN BARCODE/QR CODE"
                 android:textAlignment="gravity"
                 android:textIsSelectable="true"
                 android:textSize="20sp"
