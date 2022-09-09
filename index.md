@@ -1,7 +1,10 @@
 This repository contains the personal coding projects I have completed. A brief description of each project can be found below.
 
 # TicTacToe:
-This folder contains all of the files used to create an Android app of the classic TicTacToe game. The main code can be found at the below links.
+This folder contains all of the files used to create an Android app of the classic TicTacToe game. 
+<img src="Screenshots/Screenshot_20220908-104452_TicTacToe.png" alt="screenshot of app first loaded" style="width:128px;height:128px;">
+
+The main code can be found at the below links.
 
 ### MainActivity.java
 [app/src/main/java/com/example/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/java/com/example/TicTacToe/MainActivity.java)
