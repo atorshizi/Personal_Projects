@@ -1,4 +1,4 @@
-This repository contains the personal coding projects I have completed. A brief description of each project can be found below.
+This repository contains the personal coding projects I have completed. A brief description of each project, links to code, and screenshots can be found below.
 
 # OCR:
 This folder contains all of the files that was used to create an android app that incorporates the Google ML Kit and can recognize text in images from / either existing images or new images taken from the camera - Optical Character Recognition (OCR). It can also scan different barcode/QR code formats and give the raw data and format type to the user. The main code can be found at the below links.
