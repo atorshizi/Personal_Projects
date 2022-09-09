@@ -1,6 +1,5 @@
 This repository contains the personal coding projects I have completed. A brief description of each project can be found below.
 <img style="float: right;" src="Screenshots/Screenshot_2022-09-09_001752.png">
-
 # TicTacToe:
 <img src="Screenshots/Screenshot_2022-09-09_001752.png" alt="app icon" style="width:150px;">
 
