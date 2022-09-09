@@ -25,6 +25,15 @@ The main code can be found at the below links.
 # OCR:
 This folder contains all of the files that was used to create an android app that incorporates the Google ML Kit and can recognize text in images from / either existing images or new images taken from the camera - Optical Character Recognition (OCR). It can also scan different barcode/QR code formats and give the raw data and format type to the user. The main code can be found at the below links.
 
+<p float="left">
+  <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014226_Camera.png" alt="screenshot of a finished game" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014237_OCR.png" alt="screenshot of a finished game" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014800_Camera.png" alt="screenshot of mid game play" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of a finished game" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of a finished game" style="width:150px;">
+ </p>
+
 ### MainActivity.java
 [app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
 
