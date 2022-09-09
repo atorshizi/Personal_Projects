@@ -1,5 +1,6 @@
 This repository contains the personal coding projects I have completed. A brief description of each project can be found below.
 
+<img src="Screenshots/Screenshot_2022-09-09_001752.png" alt="app icon">
 # TicTacToe:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game. 
 <p float="left">
