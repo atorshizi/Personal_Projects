@@ -37,7 +37,7 @@ This folder contains all of the files used to create an Android app of the class
  
 The images above show a demonstration of the game when it is first started as well as different scenarios in which either player X or player O win the game or if the game ends in a tie. 
 
-### The main code and apk can be found at the below links:
+#### The main code and apk can be found at the below links:
 
 ### MainActivity.java
 [app/src/main/java/com/example/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/java/com/example/TicTacToe/MainActivity.java)
