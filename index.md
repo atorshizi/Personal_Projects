@@ -11,6 +11,8 @@ In this project, I created an android app that can recognize text in images from
   <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of a finished game" style="width:150px;">
   <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of a finished game" style="width:150px;">
  </p>
+ 
+Above, we can see the startup page of the app, as well as a demo in which the user takes a picture a sentence in the app and the sentence is then processed and shown below the image taken in the app in text form (image 3). It also shows a demo in which a barcode/QR code is scanned and the respective value is then given to the user.
 
 The main code and apk can be found at the below links.
 
@@ -32,6 +34,8 @@ This folder contains all of the files used to create an Android app of the class
   <img src="Screenshots/Screenshot_20220908-104536_TicTacToe.png" alt="screenshot of a finished game" style="width:150px;">
   <img src="Screenshots/Screenshot_20220908-104611_TicTacToe.png" alt="screenshot of a finished game" style="width:150px;">
  </p>
+ 
+The images above show a demonstration of the game when it is first started as well as different scenarios in which either player X or player O win the game or if the game ends in a tie. 
 
 The main code and apk can be found at the below links.
 
