@@ -16,7 +16,7 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 
 ### The main code and apk can be found at the below links:
 
-### MainActivity.java
+#### MainActivity.java
 [app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
 
 ### MainActivity.xml
