@@ -14,7 +14,7 @@ In this project, I created an android app that can recognize text in images from
  
 Above, we can see the startup page of the app, as well as a demo in which the user takes a picture a sentence in the app and the sentence is then processed and shown below the image taken in the app in text form (image 3). It also shows a demo in which a barcode/QR code is scanned and the respective value is then given to the user.
 
-The main code and apk can be found at the below links.
+### The main code and apk can be found at the below links:
 
 ### MainActivity.java
 [app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
@@ -37,7 +37,7 @@ This folder contains all of the files used to create an Android app of the class
  
 The images above show a demonstration of the game when it is first started as well as different scenarios in which either player X or player O win the game or if the game ends in a tie. 
 
-The main code and apk can be found at the below links.
+### The main code and apk can be found at the below links:
 
 ### MainActivity.java
 [app/src/main/java/com/example/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/java/com/example/TicTacToe/MainActivity.java)
