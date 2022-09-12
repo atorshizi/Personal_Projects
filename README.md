@@ -4,12 +4,12 @@ This repository contains the personal coding projects I have completed. A brief 
 In this project, I created an android app that can recognize text in images from / either existing images or new images taken from the camera - a form of Optical Character Recognition (OCR). Further, It can also scan different barcode/QR code formats and give the raw data and format type to be used. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
 
 <p float="left">
-  <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:150px;">
-  <img src="Screenshots/Screenshot_20220909-014226_Camera.png" alt="screenshot of a finished game" style="width:150px;">
-  <img src="Screenshots/Screenshot_20220909-014237_OCR.png" alt="screenshot of a finished game" style="width:150px;">
-  <img src="Screenshots/Screenshot_20220909-014800_Camera.png" alt="screenshot of mid game play" style="width:150px;">
-  <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of a finished game" style="width:150px;">
-  <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of a finished game" style="width:150px;">
+  <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:200px;">
+  <img src="Screenshots/Screenshot_20220909-014226_Camera.png" alt="screenshot of a finished game" style="width:200px;">
+  <img src="Screenshots/Screenshot_20220909-014237_OCR.png" alt="screenshot of a finished game" style="width:200px;">
+  <img src="Screenshots/Screenshot_20220909-014800_Camera.png" alt="screenshot of mid game play" style="width:200px;">
+  <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of a finished game" style="width:200px;">
+  <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of a finished game" style="width:200px;">
  </p>
  
 Above, we can see the startup page of the app, as well as a demo in which the user takes a picture a sentence in the app and the sentence is then processed and shown below the image taken in the app in text form (image 3). It also shows a demo in which a barcode/QR code is scanned and the respective value is then given to the user.
