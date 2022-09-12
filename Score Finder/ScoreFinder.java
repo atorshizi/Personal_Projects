@@ -1,33 +1,60 @@
-import java.io.File;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.List;
+import javax.swing.*;
 
-public class ScoreFinder {
+public class ScoreFinder implements ActionListener{
+    private JLabel jlout;
+    private List<JTextField> inputList;
     public static void main(String args[]) throws IOException{
-        ArrayList<Frame> Game = new ArrayList<>();
-        // Scanner input = new Scanner(System.in);
-        Scanner input = new Scanner(new File("C:\\Users\\ators\\AndroidStudioProjects\\Score Finder\\score.txt"));
-        for (int i = 0; i < 10; i++){
-            String strInput = input.next();
-            String[] currFrame = strInput.split(",");
-            switch (currFrame.length){
-                case 1:
-                    Game.add(new Frame(1, Integer.valueOf(currFrame[0])));
-                    break;
-                case 2:
-                    Game.add(new Frame(1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1])));
-                    break;
-                case 3:
-                    Game.add(new Frame(10, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1]),Integer.valueOf(currFrame[2])));
-                    break;
-            }
+        ScoreFinder test = new ScoreFinder();
+        test.startGUI();
+    }
+    public void startGUI(){
+        JFrame jf = new JFrame("Game Card");
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel jp = new JPanel();
+        JLabel jl = new JLabel("Enter scores below:");
+        jlout = new JLabel("Total Score: ");
+        JTextField input1 = new JTextField(3);
+        JTextField input2 = new JTextField(3);
+        JTextField input3 = new JTextField(3);
+        JTextField input4 = new JTextField(3);
+        JTextField input5 = new JTextField(3);
+        JTextField input6 = new JTextField(3);
+        JTextField input7 = new JTextField(3);
+        JTextField input8 = new JTextField(3);
+        JTextField input9 = new JTextField(3);
+        JTextField input10 = new JTextField(5);
+        inputList = Arrays.asList(input1,input2,input3,input4,input5,input6,input7,input8,input9,input10);
+        JButton sub = new JButton("Submit");
+        sub.addActionListener(this);
+        Dimension size = jl.getPreferredSize();
+        jp.setLayout(null);
+        jf.setSize(550,200);
+        jl.setBounds(25, 25, size.width + 50, size.height);
+        int offset = 0;
+        for (JTextField input : inputList){
+            input.setLocation((int) jl.getLocation().getX() + offset, (int) jl.getLocation().getY() + size.height);
+            Dimension inputSize = input.getPreferredSize();
+            input.setSize(inputSize);
+            input.setForeground(Color.red);
+            jp.add(input);
+            offset += input.getWidth();
         }
-        for (int i = 0; i < 10; i++){
-            System.out.print(Game.get(i).getScores() + ",");
-        }
-        System.out.println(calcScore(Game));
-        input.close();
+        Dimension sizeOut = jlout.getPreferredSize();
+        jlout.setBounds((int) jl.getLocation().getX() + offset, (int) jl.getLocation().getY() + size.height, (int) sizeOut.getWidth() + 50, (int) sizeOut.getHeight());
+        Dimension but = sub.getPreferredSize();
+        sub.setBounds((int) jl.getLocation().getX(), (int)input1.getLocation().getY() + input1.getHeight(), (int)but.getWidth() + 50,(int) but.getHeight());
+        jp.add(sub);
+        jp.add(jl);
+        jp.add(jlout);
+        jf.add(jp);
+        jf.setVisible(true);
     }
     public static int calcScore(ArrayList<Frame> gameList){
         int sum = 0;
@@ -99,5 +126,37 @@ public class ScoreFinder {
                 }
             }
         return sum;
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        ArrayList<Frame> Game = new ArrayList<>();
+        for (int i = 0; i < 10; i++){
+            String frameScore = inputList.get(i).getText();
+            String[] currFrame = frameScore.split(",");
+            switch (currFrame.length){
+                case 1:
+                    try {
+                        Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0])));
+                    } catch (Exception e1) {
+                        // TODO Auto-generated catch block
+                    }
+                    break;
+                case 2:
+                    try {
+                        Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1])));
+                    } catch (Exception e2) {
+                        // TODO Auto-generated catch block
+                    }
+                    break;
+                case 3:
+                    try {
+                        Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1]),Integer.valueOf(currFrame[2])));
+                    } catch (Exception e3) {
+                        // TODO Auto-generated catch block
+                    }
+                    break;
+            }
+        }
+        jlout.setText("Total Score: " + calcScore(Game));
     }
 }
