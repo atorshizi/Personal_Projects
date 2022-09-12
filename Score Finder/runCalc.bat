@@ -1,0 +1,2 @@
+javac ScoreFinder.java
+java ScoreFinder

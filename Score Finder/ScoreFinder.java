@@ -9,6 +9,7 @@ import javax.swing.*;
 
 public class ScoreFinder implements ActionListener{
     private JLabel jlout;
+    private JLabel errMsg;
     private List<JTextField> inputList;
     public static void main(String args[]) throws IOException{
         ScoreFinder test = new ScoreFinder();
@@ -19,7 +20,7 @@ public class ScoreFinder implements ActionListener{
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel jp = new JPanel();
         JLabel jl = new JLabel("Enter scores below:");
-        jlout = new JLabel("Total Score: ");
+        jlout = new JLabel("Total Score: ---");
         JTextField input1 = new JTextField(3);
         JTextField input2 = new JTextField(3);
         JTextField input3 = new JTextField(3);
@@ -50,6 +51,9 @@ public class ScoreFinder implements ActionListener{
         jlout.setBounds((int) jl.getLocation().getX() + offset, (int) jl.getLocation().getY() + size.height, (int) sizeOut.getWidth() + 50, (int) sizeOut.getHeight());
         Dimension but = sub.getPreferredSize();
         sub.setBounds((int) jl.getLocation().getX(), (int)input1.getLocation().getY() + input1.getHeight(), (int)but.getWidth() + 50,(int) but.getHeight());
+        errMsg = new JLabel(" ");
+        errMsg.setBounds((int) sub.getLocation().getX(), (int) sub.getLocation().getY() + sub.getHeight() * 2 , (int) errMsg.getPreferredSize().getWidth() + 50, (int) errMsg.getPreferredSize().getHeight());
+        jp.add(errMsg);
         jp.add(sub);
         jp.add(jl);
         jp.add(jlout);
@@ -70,10 +74,8 @@ public class ScoreFinder implements ActionListener{
                                 Frame frameToDouble = gameList.get(j+1);
                                 Object scoreNextOne = frameToDouble.getScores().get(0);
                                 if (scoreNextOne.getClass() == testStr.getClass()){
-                                    // if (scoreNextOne.equals("X")){
                                         scoreNextOne = 10;
                                         sum += (int) scoreNextOne;
-                                    // }
                                 }
                                 else{
                                     sum += (int) scoreNextOne;
@@ -129,6 +131,8 @@ public class ScoreFinder implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        errMsg.setText(" ");
+        errMsg.setSize(errMsg.getPreferredSize());
         ArrayList<Frame> Game = new ArrayList<>();
         for (int i = 0; i < 10; i++){
             String frameScore = inputList.get(i).getText();
@@ -138,21 +142,30 @@ public class ScoreFinder implements ActionListener{
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0])));
                     } catch (Exception e1) {
-                        // TODO Auto-generated catch block
+                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+                        errMsg.setSize(errMsg.getPreferredSize());
+                        jlout.setText("Total Score: --- ");
+                        return;
                     }
                     break;
                 case 2:
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1])));
                     } catch (Exception e2) {
-                        // TODO Auto-generated catch block
+                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+                        errMsg.setSize(errMsg.getPreferredSize());
+                        jlout.setText("Total Score: --- ");
+                        return;
                     }
                     break;
                 case 3:
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1]),Integer.valueOf(currFrame[2])));
                     } catch (Exception e3) {
-                        // TODO Auto-generated catch block
+                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+                        errMsg.setSize(errMsg.getPreferredSize());
+                        jlout.setText("Total Score: --- ");
+                        return;
                     }
                     break;
             }
