@@ -35,7 +35,7 @@ This project is a java program and GUI that interacts with the user to get bowli
   <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:300px;">
  </p>
  
-In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result. 
+In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result; the error occurs in the last frame where the user has entered 11 which is not possible as there are only 10 pins.
 
 ### The main code and apk can be found at the below links:
 
