@@ -19,10 +19,10 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 #### MainActivity.java
 [app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
 
-### MainActivity.xml
+#### MainActivity.xml
 [app/src/main/res/layout/activity_main.xml](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/res/layout/activity_main.xml)
 
-### .apk file
+#### .apk file
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
 
 # Bowling Score Calculator :
@@ -37,7 +37,7 @@ This project is a java program and GUI that interacts with the user to get bowli
  
 In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result; the error occurs in the last frame where the user has entered 11 which is not possible as there are only 10 pins.
 
-### The main code and apk can be found at the below links:
+### The main code can be found at the below links:
 
 #### [Score Finder.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/ScoreFinder.java)
 
@@ -55,13 +55,13 @@ This folder contains all of the files used to create an Android app of the class
  
 The images above show a demonstration of the game when it is first started as well as different scenarios in which either player X or player O win the game or if the game ends in a tie. 
 
-#### The main code and apk can be found at the below links:
+### The main code and apk can be found at the below links:
 
-### MainActivity.java
+#### MainActivity.java
 [app/src/main/java/com/example/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/java/com/example/TicTacToe/MainActivity.java)
 
-### MainActivity.xml
+#### MainActivity.xml
 [app/src/main/res/layout/activity_main.xml](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/src/main/res/layout/activity_main.xml)
 
-### .apk file
+#### .apk file
 [app/TicTacToe.apk](https://github.com/atorshizi/Personal_Projects/blob/main/TicTacToe/app/TicTacToe.apk)
