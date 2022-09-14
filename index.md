@@ -1,4 +1,4 @@
-This repository contains the personal coding projects I have completed. A brief description of each project, links to code, and screenshots can be found below.
+## This repository contains 3 personal coding projects I have completed - OCR, Score Calculator, TicTacToe. A brief description of each project can be found below as well as links to the code and screenshots.
 
 # OCR:
 
@@ -14,8 +14,7 @@ In this project, I created an android app that can recognize text in images from
  
 Above, we can see the startup page of the app, as well as a demo in which the user takes a picture a sentence in the app and the sentence is then processed and shown below the image taken in the app in text form (image 3). It also shows a demo in which a barcode/QR code is scanned and the respective value is then given to the user.
 
-<details>
-<summary> ### The main code and apk can be found at the below links: </summary>
+### The main code and apk can be found at the below links:
 
 #### MainActivity.java
 [app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
@@ -25,7 +24,7 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 
 ### .apk file
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
-</details>
+
 
 
 # Bowling Score Calculator :
