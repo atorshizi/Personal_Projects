@@ -1,4 +1,4 @@
-### This repository contains 3 personal coding projects I have completed - OCR, Score Calculator, TicTacToe. A brief description of each project can be found below as well as links to the code and screenshots.
+This repository contains 3 personal coding projects I have completed - OCR, Score Calculator, TicTacToe. A brief description of each project can be found below as well as links to the code and screenshots.
 
 # OCR:
 
