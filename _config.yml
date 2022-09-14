@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman
-plugins: 
-- jekyll-remote-theme
 title: [The title of your site]
 description: [A short description of your site's purpose]
+plugins: 
+- jekyll-remote-theme
