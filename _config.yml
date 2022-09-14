@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman
-title: [The title of your site]
-description: [A short description of your site's purpose]
+title: Personal Projects - Arian Torshizi
+description: This repository contains 3 personal coding projects I have completed - OCR, Score Calculator, TicTacToe. A brief description of each project can be found below as well as links to the code and screenshots.
 plugins: 
 - jekyll-remote-theme
