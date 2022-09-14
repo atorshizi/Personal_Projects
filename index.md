@@ -1,5 +1,5 @@
 # OCR:
-
+ 
 In this project, I created an android app that can recognize text in images from / either existing images or new images taken from the camera - a form of Optical Character Recognition (OCR). Further, It can also scan different barcode/QR code formats and give the raw data and format type to be used. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
 <p float="left">
   <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:200px;">
