@@ -19,6 +19,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +43,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<Object>[] Formats = new ArrayList[13];
+    File image = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +74,35 @@ public class MainActivity extends AppCompatActivity {
         Formats[10] = new ArrayList<>();Formats[10].add(Barcode.FORMAT_PDF417);Formats[10].add("PDF417");
         Formats[11] = new ArrayList<>();Formats[11].add(Barcode.FORMAT_AZTEC);Formats[11].add("AZTEC");
         Formats[12] = new ArrayList<>();Formats[12].add(Barcode.FORMAT_DATA_MATRIX);Formats[12].add("DATA_MATRIX");
+
+        Button CFF = findViewById(R.id.button3);
+        Button TF = findViewById(R.id.button2);
+        Button BQR = findViewById(R.id.button);
+        //set on click listeners for the three buttons
+        CFF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final int OLDIMG = 0;
+                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent,"Select Pics"), OLDIMG);
+            }
+        });
+        TF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final int NEWIMG = 1;
+                capture(v,NEWIMG);
+            }
+        });
+        BQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final int NEWIMGQR = 2;
+                capture(v, NEWIMGQR);
+            }
+        });
     }
 
     @Override
@@ -83,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (requestCode == 0) {
-            // make sure to check the exit codes later on
             Uri image = data.getData();
             // check size
             MAX_FILE_SIZE = 10000000;
@@ -203,40 +233,19 @@ public class MainActivity extends AppCompatActivity {
                             else{
                                 text.setText("None Found!");
                             }
+                            // task success
                             return;
-                            // Task completed successfully
-                            // ...
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            //task failed prompt and then return
                             Toast.makeText(MainActivity.this, "Processing Failed", Toast.LENGTH_SHORT).show();
                             return;
-                            // Task failed with an exception
-                            // ...
                         }
                     });
         }
-    }
-
-    public void func(View v){
-        final int OLDIMG = 0;
-        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        intent.setType("image/*");
-        startActivityForResult(Intent.createChooser(intent,"Select Pics"), OLDIMG);
-    }
-
-    File image = null;
-    public void cam(View v){
-        final int NEWIMG = 1;
-        capture(v,NEWIMG);
-    }
-
-    public void barcode(View v) {
-        final int NEWIMGQR = 2;
-        capture(v, NEWIMGQR);
     }
 
     private void capture(View v, int NEWIMG){
@@ -253,7 +262,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Could not create file, try again.", Toast.LENGTH_SHORT).show();
             return;
         }
-
         try{
             if (image != null){
                 Uri photoURI = FileProvider.getUriForFile(MainActivity.this, "com.example.OCR.fileprovider", image);

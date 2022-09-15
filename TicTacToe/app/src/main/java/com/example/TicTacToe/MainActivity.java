@@ -49,6 +49,34 @@ public class MainActivity extends AppCompatActivity {
         allButtons.add(R.id.button12);
         allButtons.add(R.id.button11);
         allButtons.add(R.id.button13);
+        for (int button : allButtons){
+            Button tempBut = findViewById(button);
+            tempBut.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    click(v);
+                }
+            });
+        }
+        Button rematch = findViewById(R.id.button);
+        rematch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i = 0; i < allButtons.size(); i++){
+                    Button button = findViewById(allButtons.get(i));
+                    button.setBackgroundColor(0xff3A3A3A);
+                    button.setText("Press to Choose");
+                    button.setTextColor(0x88ffffff);
+                    button.setEnabled(true);
+                    button.setTextSize(14);
+                    xList.clear();
+                    oList.clear();
+                    xTurn = true;
+                    TextView turn = (TextView) findViewById(R.id.textView);
+                    turn.setText("It is X's Turn");
+                }
+            }
+        });
     }
 
     public void click(View input) {
@@ -142,21 +170,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-
-    public void reset(View v){
-        for (int i = 0; i < allButtons.size(); i++){
-            Button button = findViewById(allButtons.get(i));
-            button.setBackgroundColor(0xff3A3A3A);
-            button.setText("Press to Choose");
-            button.setTextColor(0x88ffffff);
-            button.setEnabled(true);
-            button.setTextSize(14);
-            xList.clear();
-            oList.clear();
-            xTurn = true;
-            TextView turn = (TextView) findViewById(R.id.textView);
-            turn.setText("It is X's Turn");
-        }
-    }
-
 }
