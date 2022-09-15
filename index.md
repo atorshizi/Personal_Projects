@@ -1,4 +1,4 @@
-A brief description of each project can be found below as well as links to the code and screenshots.
+A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.
 
 # OCR:
 In this project, I created an android app that can recognize text in images from either existing images or from new images that can be taken from the camera directly from the app - this is a form of Optical Character Recognition (OCR). Further, it can also scan one or multiple barcode/QR codes from a single picture and display the raw data and format type - it supports 13 different barcode/QR code formats. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
