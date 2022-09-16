@@ -31,8 +31,8 @@ This project is a java program and GUI that interacts with the user to get bowli
 
 <p float="left">
   <img src="Screenshots/Screenshot 2022-09-13 005317.png" alt="screenshot the starting state" style="width:300px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005719.png" alt="screenshot of example score 1" style="width:300px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="screenshot of example score 2" style="width:300px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005719.png" alt="example score 1" style="width:300px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="xample score 2" style="width:300px;">
   <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:300px;">
 </p>
  
