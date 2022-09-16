@@ -137,6 +137,32 @@ public class ScoreFinder implements ActionListener{
         for (int i = 0; i < 10; i++){
             String frameScore = inputList.get(i).getText();
             String[] currFrame = frameScore.split(",");
+            //decode the commonly used bowling symbols
+            for (int j = 0; j < currFrame.length ; j++){
+                String score = currFrame[j];
+                if (score.equals("X")){
+                    currFrame[j] = "10";
+                }
+                else if (score.equals("/")){
+                    if (j == 0){
+                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+                        errMsg.setSize(errMsg.getPreferredSize());
+                        jlout.setText("Total Score: --- ");
+                        return;
+                    }
+                    else {
+                        try{
+                            currFrame[j] =  String.valueOf((10 - Integer.parseInt(currFrame[j-1])));
+                        } catch(Exception ex){
+                            errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+                            errMsg.setSize(errMsg.getPreferredSize());
+                            jlout.setText("Total Score: --- ");
+                            return;
+                        }
+                    }
+                }
+            }
+
             switch (currFrame.length){
                 case 1:
                     try {
