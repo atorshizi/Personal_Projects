@@ -145,18 +145,14 @@ public class ScoreFinder implements ActionListener{
                 }
                 else if (score.equals("/")){
                     if (j == 0){
-                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
-                        errMsg.setSize(errMsg.getPreferredSize());
-                        jlout.setText("Total Score: --- ");
+                        setErr();
                         return;
                     }
                     else {
                         try{
                             currFrame[j] =  String.valueOf((10 - Integer.parseInt(currFrame[j-1])));
                         } catch(Exception ex){
-                            errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
-                            errMsg.setSize(errMsg.getPreferredSize());
-                            jlout.setText("Total Score: --- ");
+                            setErr();
                             return;
                         }
                     }
@@ -168,9 +164,7 @@ public class ScoreFinder implements ActionListener{
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0])));
                     } catch (Exception e1) {
-                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
-                        errMsg.setSize(errMsg.getPreferredSize());
-                        jlout.setText("Total Score: --- ");
+                        setErr();
                         return;
                     }
                     break;
@@ -178,9 +172,7 @@ public class ScoreFinder implements ActionListener{
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1])));
                     } catch (Exception e2) {
-                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
-                        errMsg.setSize(errMsg.getPreferredSize());
-                        jlout.setText("Total Score: --- ");
+                        setErr();
                         return;
                     }
                     break;
@@ -188,14 +180,17 @@ public class ScoreFinder implements ActionListener{
                     try {
                         Game.add(new Frame(i + 1, Integer.valueOf(currFrame[0]), Integer.valueOf(currFrame[1]),Integer.valueOf(currFrame[2])));
                     } catch (Exception e3) {
-                        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
-                        errMsg.setSize(errMsg.getPreferredSize());
-                        jlout.setText("Total Score: --- ");
+                        setErr();
                         return;
                     }
                     break;
             }
         }
         jlout.setText("Total Score: " + calcScore(Game));
+    }
+    private void setErr(){
+        errMsg.setText("INVALID SCORE ENTRY. PLEASE TRY AGAIN!");
+        errMsg.setSize(errMsg.getPreferredSize());
+        jlout.setText("Total Score: --- ");
     }
 }
