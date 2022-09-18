@@ -26,7 +26,7 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
 
 
-# Bowling Score Calculator :
+# Bowling Score Calculator:
 This project is a java program and GUI that interacts with the user to get bowling score frame by frame for a standard game with 10 frames. It can then calculate the game score based on the rules of bowling in which spares double the next score and a strike doubles the next two. 
 
 <p float="left">
@@ -44,7 +44,7 @@ In the above screenshots we can see the state of the program when it first launc
 
 #### [Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
 
-# TicTacToe
+# TicTacToe:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game; the app shows which player's turn it is and can also determine once a winner/tie has been achieved. 
 <p float="left">
   <img src="Screenshots/Screenshot_20220908-104452_TicTacToe.png" alt="screenshot of app first loaded" style="width:150px;">
