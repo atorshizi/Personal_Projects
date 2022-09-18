@@ -1,31 +1,3 @@
-<style>
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #f1f1f1;
-}
-li {
-  display: inline;
-}
-li a {
-  color: #000000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-li a:hover {
-  background-color: #00a82a;
-  color: white;
-}
-</style>
-
-<ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-</ul>
-
 A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.
 
 # OCR:
