@@ -1,4 +1,4 @@
-A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.
+A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.\
 Link to each project's section: [OCR](#ocr), [Score Calculator](#bowling-score-calculator), [TicTacToe](#tictactoe)
 
 # OCR:
