@@ -209,9 +209,7 @@ public class MainActivity extends AppCompatActivity {
 
             ImageView imgView = findViewById(R.id.imageView3);
             imgView.setImageBitmap(bitmp);
-
             InputImage img = InputImage.fromBitmap(bitmp,0);
-
             BarcodeScanner scanner = BarcodeScanning.getClient();
             Task<List<Barcode>> result = scanner.process(img)
                     .addOnSuccessListener(new OnSuccessListener<List<Barcode>>() {
