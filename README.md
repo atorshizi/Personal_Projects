@@ -1,4 +1,5 @@
-A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.
+A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.\
+Link to each project's section on this page: [OCR](#ocr), [Score Calculator](#score-calculator), [TicTacToe](#tictactoe)
 
 # OCR:
 In this project, I created an android app that can recognize text in images from either existing images or from new images that can be taken from the camera directly from the app - this is a form of Optical Character Recognition (OCR). Further, it can also scan one or multiple barcode/QR codes from a single picture and display the raw data and format type - it supports 13 different barcode/QR code formats. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
@@ -26,8 +27,8 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
 
 
-# Bowling Score Calculator :
-This project is a java program and GUI that interacts with the user to get bowling score frame by frame for a standard game with 10 frames. It can then calculate the game score based on the rules of bowling in which spares double the next score and a strike doubles the next two. 
+# Score Calculator:
+This project draws on the Java swing toolkit to create a Java program and GUI that interacts with the user to get bowling score frame by frame for a standard game with 10 frames. It can then calculate the game score based on the rules of bowling in which spares double the next score and a strike doubles the next two. 
 
 <p float="left">
   <img src="Screenshots/Screenshot 2022-09-13 005317.png" alt="screenshot the starting state" style="width:325px;">
@@ -44,7 +45,7 @@ In the above screenshots we can see the state of the program when it first launc
 
 #### [Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
 
-# TicTacToe
+# TicTacToe:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game; the app shows which player's turn it is and can also determine once a winner/tie has been achieved. 
 <p float="left">
   <img src="Screenshots/Screenshot_20220908-104452_TicTacToe.png" alt="screenshot of app first loaded" style="width:150px;">
