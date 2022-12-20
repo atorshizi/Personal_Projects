@@ -37,14 +37,11 @@ for i in range(int(input("Enter Test Number: "))):
 scaler = StandardScaler()
 scaler.fit(X)
 xNorm = scaler.transform(X)
-# for sample in xNorm:
-#     print(sample)
-#     arrToAdd = []
-#     for feature in sample:
-#         arrToAdd.append((pow(feature,2)))
-#     np.append(sample,[[arrToAdd]])
-#     print(sample)
-#     print(" ")
+for sample in xNorm:
+    arrToAdd = []
+    for feature in sample:
+        arrToAdd.append((pow(feature,2)))
+    np.append(sample,[[arrToAdd]])
 reg = SGDRegressor(max_iter=10000, tol=0.001)
 reg.fit(xNorm,Y)
 # size = int(input("Enter Size: "))
@@ -78,4 +75,4 @@ if (input("Show Plots? ") == "y"):
         axis[i//(col),(i%(col))].scatter(X[i],Y)
         axis[(i//col),(i%(col))].xaxis.set_label_text(labels[i+1])
     plt.show()
-# C:\\Users\\ators\\Documents\\(1) UCSD Stuff\\kc_house_data.csv
+# C:\\Users\\ators\\Documents\\Personal_Projects\\Regression\\kc_house_data.csv
