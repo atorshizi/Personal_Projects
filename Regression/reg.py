@@ -4,7 +4,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import random as rand
-import decimal
+import datetime as dt
 
 f = open(input("Enter CSV File Adress: "))
 i = 0
@@ -27,7 +27,7 @@ f.close()
 xTest, yTest = [], []
 rand.seed(0)
 for i in range(int(input("Enter Test Number: "))):
-    j = rand.randint(0,len(X)-1)
+    j = rand.randint((dt.datetime.now().second),len(X)-1)
     xTest.append(X[j])
     yTest.append(Y[j])
     del X[j]
