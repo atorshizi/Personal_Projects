@@ -61,7 +61,7 @@ class SKL_SGD:
                 for j in range(col):
                     axis[i,j].get_xaxis().set_ticks([])
                     axis[i,j].get_yaxis().set_ticks([])
-                    if ((plotNum) < len(x_temp[0])):
+                    if ((plotNum) < len(x_temp)):
                         axis[(i),(j)].scatter(x_temp[plotNum],self.Y)
                         axis[(i),(j)].xaxis.set_label_text(self.labels[plotNum+1])
                         plotNum += 1
@@ -69,7 +69,7 @@ class SKL_SGD:
             for i in range(row):
                 axis[i].get_xaxis().set_ticks([])
                 axis[i].get_yaxis().set_ticks([])
-                if ((plotNum) < len(x_temp[0])):
+                if ((plotNum) < len(x_temp)):
                     axis[(i)].scatter(x_temp[plotNum],self.Y)
                     axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
                     plotNum += 1
@@ -77,7 +77,7 @@ class SKL_SGD:
             for i in range(col):
                 axis[i].get_xaxis().set_ticks([])
                 axis[i].get_yaxis().set_ticks([])
-                if ((plotNum) < len(x_temp[0])):
+                if ((plotNum) < len(x_temp)):
                     axis[(i)].scatter(x_temp[plotNum],self.Y)
                     axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
                     plotNum += 1

@@ -29,7 +29,6 @@ class BGDRegression:
         f.close()
         self.X = self.__transform(self.X)
         self.m = len(self.X)
-        print(self.X)
         return True
     def setParam(self,Alpha,Max_iter,Epsilon):
         if(type(Alpha) == type(self.alpha)):
@@ -96,6 +95,38 @@ class BGDRegression:
         plt.xlabel("Iterations")
         plt.show()
         return True
+    def plotFeatures(self,row,col):
+        if ((row == 0) or (col == 0)):
+            return False
+        x_temp = np.transpose(self.X)
+        figure, axis = plt.subplots(row,col)
+        plotNum = 0
+        if((row > 1) and (col > 1)):
+            for i in range(row):
+                for j in range(col):
+                    axis[i,j].get_xaxis().set_ticks([])
+                    axis[i,j].get_yaxis().set_ticks([])
+                    if ((plotNum) < len(x_temp)):
+                        axis[(i),(j)].scatter(x_temp[plotNum],self.Y)
+                        axis[(i),(j)].xaxis.set_label_text(self.labels[plotNum+1])
+                        plotNum += 1
+        elif((row > 1) and (col <= 1)):
+            for i in range(row):
+                axis[i].get_xaxis().set_ticks([])
+                axis[i].get_yaxis().set_ticks([])
+                if ((plotNum) < len(x_temp)):
+                    axis[(i)].scatter(x_temp[plotNum],self.Y)
+                    axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
+                    plotNum += 1
+        else:
+            for i in range(col):
+                axis[i].get_xaxis().set_ticks([])
+                axis[i].get_yaxis().set_ticks([])
+                if ((plotNum) < len(x_temp)):
+                    axis[(i)].scatter(x_temp[plotNum],self.Y)
+                    axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
+                    plotNum += 1
+        plt.show()
     def predict(self,sampleToPredict):
         for i in range(len(sampleToPredict)):
             sampleToPredict[i] /= self.X_scalar[i]
