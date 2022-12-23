@@ -24,3 +24,4 @@ avgDiff = sum/totalNum
 print("Average Margin of Error: " + str(avgDiff))
 SKLtest.plotFeatures(3,6)
 print("Predicted Value: " + str(SKLtest.predict(input("Enter Sample: ").split(","))))
+input("Press enter to quit: ")
