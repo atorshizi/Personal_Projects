@@ -1,4 +1,4 @@
-from CustomRegression import BGDRegression
+from Custom_BGD_Regression import BGDRegression
 from SKL_Regression import SKL_SGD
 
 BGDtest = BGDRegression()
