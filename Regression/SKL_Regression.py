@@ -50,16 +50,35 @@ class SKL_SGD:
         self.reg.fit(self.X,self.Y)
     def predict(self,sampleToPredict):
         return self.reg.predict(self.scaler.transform([sampleToPredict]))[0]
-    def plotFeatures(self):
+    def plotFeatures(self,row,col):
+        if ((row == 0) or (col == 0)):
+            return False
         x_temp = np.transpose(self.X)
-        row = 3
-        col = 6
         figure, axis = plt.subplots(row,col)
-        for i in range(row):
-            for j in range(col):
-                axis[i,j].get_xaxis().set_ticks([])
-                axis[i,j].get_yaxis().set_ticks([])
-        for i in range(len(x_temp)):
-            axis[i//(col),(i%(col))].scatter(x_temp[i],self.Y)
-            axis[(i//col),(i%(col))].xaxis.set_label_text(self.labels[i+1])
+        plotNum = 0
+        if((row > 1) and (col > 1)):
+            for i in range(row):
+                for j in range(col):
+                    axis[i,j].get_xaxis().set_ticks([])
+                    axis[i,j].get_yaxis().set_ticks([])
+                    if ((plotNum) < len(x_temp[0])):
+                        axis[(i),(j)].scatter(x_temp[plotNum],self.Y)
+                        axis[(i),(j)].xaxis.set_label_text(self.labels[plotNum+1])
+                        plotNum += 1
+        elif((row > 1) and (col <= 1)):
+            for i in range(row):
+                axis[i].get_xaxis().set_ticks([])
+                axis[i].get_yaxis().set_ticks([])
+                if ((plotNum) < len(x_temp[0])):
+                    axis[(i)].scatter(x_temp[plotNum],self.Y)
+                    axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
+                    plotNum += 1
+        else:
+            for i in range(col):
+                axis[i].get_xaxis().set_ticks([])
+                axis[i].get_yaxis().set_ticks([])
+                if ((plotNum) < len(x_temp[0])):
+                    axis[(i)].scatter(x_temp[plotNum],self.Y)
+                    axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
+                    plotNum += 1
         plt.show()

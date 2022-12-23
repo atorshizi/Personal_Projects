@@ -20,5 +20,5 @@ for elem in xTest:
     totalNum += 1
 avgDiff = sum/totalNum
 print("Average Margin of Error: " + str(avgDiff))
+test.plotFeatures(3,6)
 print("Predicted Value: " + str(test.predict(input("Enter Sample: ").split(","))))
-test.plotFeatures()
