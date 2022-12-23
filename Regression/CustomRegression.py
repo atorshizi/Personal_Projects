@@ -1,19 +1,36 @@
 import numpy as np
 import matplotlib.pyplot as plt
 class BGDRegression:
-    X = None
-    Y = None
+    X = []
+    Y = []
     m = 0
+    labels = []
     max_iter = 10000
     epsilon = 0.001
     alpha = 0.01
     X_scalar = []
     s_X = []
     s_Y = []
-    def __init__(self,featureData,TrueAnswers) -> None:
-        self.X = self.__transform(featureData)
-        self.Y = TrueAnswers
+
+    def loadDataset(self,CSV):
+        i = 0
+        f = open(CSV,"r")
+        for x in f:
+            if (i != 0):
+                split = x.split(",")
+                self.Y.append(float(split[0]))
+                xInt = []
+                for i in range(1,len(split)):
+                    xInt.append(float(split[i]))
+                self.X.append(xInt)
+            else:
+                self.labels = x.split(",")
+            i += 1
+        f.close()
+        self.X = self.__transform(self.X)
         self.m = len(self.X)
+        print(self.X)
+        return True
     def setParam(self,Alpha,Max_iter,Epsilon):
         if(type(Alpha) == type(self.alpha)):
             self.alpha = Alpha

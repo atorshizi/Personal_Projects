@@ -82,3 +82,4 @@ class SKL_SGD:
                     axis[(i)].xaxis.set_label_text(self.labels[plotNum+1])
                     plotNum += 1
         plt.show()
+        return True
