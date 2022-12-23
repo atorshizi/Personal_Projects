@@ -42,10 +42,10 @@ The screenshots show an example of a learning curve that was given using the BGD
 ### The main code and apk can be found at the below links:
 
 #### Custom_BGD_Regression.py
-[app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/Regression/Custom_BGD_Regression.py)
+[Regression/Custom_BGD_Regression.py](https://github.com/atorshizi/Personal_Projects/blob/main/Regression/Custom_BGD_Regression.py)
 
 ### SKL_Regression.py
-[app/src/main/res/layout/activity_main.xml](https://github.com/atorshizi/Personal_Projects/blob/main/Regression/SKL_Regression.py)
+[Regression/SKL_Regression.py](https://github.com/atorshizi/Personal_Projects/blob/main/Regression/SKL_Regression.py)
 
 
 # Score Calculator:
