@@ -1,58 +1,69 @@
 import numpy as np
+import matplotlib.pyplot as plt
 class BGDRegression:
     X = None
     Y = None
-    Max_iter = 10000
-    epsilon = 0.000001
+    m = 0
+    max_iter = 10000
+    epsilon = 0.001
+    alpha = 0.01
     X_scalar = []
+    s_X = []
+    s_Y = []
     def __init__(self,featureData,TrueAnswers) -> None:
         self.X = self.__transform(featureData)
         self.Y = TrueAnswers
+        self.m = len(self.X)
+    def setParam(self,Alpha,Max_iter,Epsilon):
+        if(type(Alpha) == type(self.alpha)):
+            self.alpha = Alpha
+        if(type(Max_iter) == type(self.max_iter)):
+            self.max_iter = Max_iter
+        if(type(Epsilon) == type(self.epsilon)):
+            self.epsilon = Epsilon
     def __derCost(self,W,b,featNum):
         w_term = float(np.dot(self.X[0],W)) * self.X[0][featNum] 
         b_term = self.X[0][featNum] * b
         c_term = self.Y[0] * self.X[0][featNum]
-        m = len(self.X)
-        for i in range(1,m):
+        for i in range(1,self.m):
             w_term += self.X[i][featNum] * float(np.dot(np.matrix(self.X[i]),W))
             b_term += self.X[i][featNum] * b
             c_term += self.Y[i] * self.X[i][featNum]
-        return ((w_term + b_term - c_term)/m)
+        return ((w_term + b_term - c_term)/(self.m))
     def __derCostB(self,W,b):
         w_term = float(np.dot(self.X[0],W))
         b_term = b
         c_term = self.Y[0]
-        m = len(self.X)
-        for i in range(1,m):
+        for i in range(1,self.m):
             w_term += float(np.dot(np.matrix(self.X[i]),W))
             b_term += b
             c_term += self.Y[i]
-        return ((w_term + b_term - c_term)/m)
-    def __converge(self,W_p,W,b_p,b):
-        if (abs(b - b_p) > self.epsilon):
-            return False
-        for i in range(len(W_p)):
-            if (abs(W_p[i] - W[i]) > self.epsilon):
-                return False
-        return True
+        return ((w_term + b_term - c_term)/(self.m))
+    def __findJ(self,W,b):
+        J = 0
+        for i in range(self.m):
+            J += pow((np.dot(W,self.X[i])-(self.Y[i])),2)
+        return (J/(2* self.m))
     def __getCoeff(self):
         n = len(self.X[0])
         W = [1] * len(self.X[0])
         b = 1
         W_temp = [0] * len(self.X[0])
-        W_prev = W
         b_temp = 0
-        b_prev = b + 10
-        alpha = 0.01
-        for i in range(self.Max_iter):
-        # while(not self.__converge(W_prev,W,b_prev,b)):
+        J = self.__findJ(W,b)
+        J_prev = J/10
+        j = 0
+        while((abs((J-J_prev)/J_prev) > (self.epsilon)) and (j <= self.max_iter)):
+            self.s_X.append(j)
+            self.s_Y.append(J)
             for i in range(n):
-                W_temp[i] = W[i] - (alpha * self.__derCost(W,b,i))
-            b_temp = b - (alpha * self.__derCostB(W,b))
-            W_prev = W
-            b_prev = b
+                W_temp[i] = W[i] - (self.alpha * self.__derCost(W,b,i))
+            b_temp = b - (self.alpha * self.__derCostB(W,b))
+            J_prev = J
             W = W_temp
             b = b_temp
+            J = self.__findJ(W,b)
+            j += 1
         return [W,b]
     def __transform(self,xToNormalize):
         xToNormalize= np.transpose(xToNormalize)
@@ -62,6 +73,12 @@ class BGDRegression:
             self.X_scalar.append(featMax)
             xNorm.append(elem/featMax)
         return np.transpose(xNorm)
+    def plotLearningCurve(self):
+        plt.scatter(self.s_X,self.s_Y);
+        plt.ylabel("Loss")
+        plt.xlabel("Iterations")
+        plt.show()
+        return True
     def predict(self,sampleToPredict):
         for i in range(len(sampleToPredict)):
             sampleToPredict[i] /= self.X_scalar[i]
@@ -71,3 +88,5 @@ class BGDRegression:
 test = BGDRegression(featureData=[[1,0.5,1100],[2,1,1500],[2,1.5,1510],[1,1,1600]],
                      TrueAnswers=[100000,150000,200000,175000])
 print("Predicted Value: " + str(test.predict([1,0.5,1100])))
+test.plotLearningCurve()
+
