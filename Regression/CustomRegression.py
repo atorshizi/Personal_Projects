@@ -84,9 +84,3 @@ class BGDRegression:
             sampleToPredict[i] /= self.X_scalar[i]
         coeffs = self.__getCoeff()
         return (np.dot(coeffs[0],sampleToPredict) + coeffs[1])
-
-test = BGDRegression(featureData=[[1,0.5,1100],[2,1,1500],[2,1.5,1510],[1,1,1600]],
-                     TrueAnswers=[100000,150000,200000,175000])
-print("Predicted Value: " + str(test.predict([1,0.5,1100])))
-test.plotLearningCurve()
-
