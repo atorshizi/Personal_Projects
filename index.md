@@ -33,7 +33,7 @@ This is an implementation of a regression program - a form of supervised machine
 <p float="left">
   <img src="Screenshots/Figure_1.png" alt="screenshot of app first loaded" style="width:275px;">
   <img src="Screenshots/Figure_2.png" alt="screenshot of a finished game" style="width:275px;">
-  <img src="Screenshots/Figure_3.png" alt="screenshot of a finished game" style="width:275px;">
+  <img src="Screenshots/Figure_3.png" alt="screenshot of a finished game" style="width:300px;">
   <img src="Screenshots/Figure_4.png" alt="screenshot of mid game play" style="width:300px;">
  </p>
  
