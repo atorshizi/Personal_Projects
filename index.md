@@ -31,8 +31,8 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 This is an implementation of a regression program - a form of supervised machine learning - that can handle datasets with multiple features. There are two main files within it: Custom_BGD_Regression and SKL_Regression. The custom implementation minimizes the squared-error cost function using batch gradient descent. It processes a .csv file to use as the training data and allows users to change the default values of the learning rate, maximum number of iterations of the gradient descent, and the epsilon value that is used to determine the convergence of the gradient descent. Once trained, the developed model can be used to predict values for other examples. Using matplotlib, plots of the learning curve and individual features can be shown. The second file, SKL_Regression, is a roughly functionally equivalent program using stochastic gradient descent which was developed using scikit_learn specifically, the SGDRegressor. Further specifications on program methods and .csv formatting are commented in the program files. There is an included tester file which is used to test various methods of both programs.
 
 <p float="left">
-  <img src="Screenshots/Figure_1.png" alt="screenshot of app first loaded" style="width:275px;">
-  <img src="Screenshots/Figure_2.png" alt="screenshot of a finished game" style="width:275px;">
+  <img src="Screenshots/Figure_1.png" alt="screenshot of app first loaded" style="width:300px;">
+  <img src="Screenshots/Figure_2.png" alt="screenshot of a finished game" style="width:300px;">
   <img src="Screenshots/Figure_3.png" alt="screenshot of a finished game" style="width:300px;">
   <img src="Screenshots/Figure_4.png" alt="screenshot of mid game play" style="width:300px;">
  </p>
