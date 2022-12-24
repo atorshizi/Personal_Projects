@@ -64,9 +64,11 @@ In the above screenshots we can see the state of the program when it first launc
 
 ### The main code can be found at the below links:
 
-#### [Score Finder.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/ScoreFinder.java)
+#### ScoreFinder.java
+[Score Finder.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/ScoreFinder.java)
 
-#### [Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
+#### Frame.java
+[Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
 
 # TicTacToe:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game; the app shows which player's turn it is and can also determine once a winner/tie has been achieved. 
