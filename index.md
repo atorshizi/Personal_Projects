@@ -41,7 +41,7 @@ The second file, SKL_Regression, is a roughly functionally equivalent program us
  
 The screenshots show an example of a learning curve that was given using the BGD program in the first screenshot as well as plots of different datasets' features vs. the true output as given in the training data - one set has 3 features and the other has 18 - to be used to visualize trends. An example of how to interact with the program through the command line in shown in the fourth screenshot. In all of these scenarios, housing data was used to predict prices. 
 
-### The main code and apk can be found at the below links:
+### The main code can be found at the below links:
 
 #### Custom_BGD_Regression.py
 [Regression/Custom_BGD_Regression.py](https://github.com/atorshizi/Personal_Projects/blob/main/Regression/Custom_BGD_Regression.py)
@@ -62,7 +62,7 @@ This project draws on the Java swing toolkit to create a Java program and GUI th
  
 In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result - this is because of the score of 11 being inputted in the last frame which is not possible in a standard game of bowling. 
 
-### The main code and apk can be found at the below links:
+### The main code can be found at the below links:
 
 #### [Score Finder.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/ScoreFinder.java)
 
