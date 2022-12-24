@@ -56,8 +56,8 @@ This project draws on the Java swing toolkit to create a Java program and GUI th
 <p float="left">
   <img src="Screenshots/Screenshot 2022-09-13 005317.png" alt="screenshot the starting state" style="width:325px;">
   <img src="Screenshots/Screenshot 2022-09-13 005719.png" alt="example score 1" style="width:325px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="example score 2" style="width:325px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:325px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="example score 2" style="width:375px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:375px;">
 </p>
  
 In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result - this is because of the score of 11 being inputted in the last frame which is not possible in a standard game of bowling. 
