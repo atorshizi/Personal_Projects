@@ -1,5 +1,5 @@
 A description of each of the projects can be found below as well as links to the code and screenshots.\
-Link to each project's section on this page: [OCR](#ocr), [Regression](#regression), [Score Calculator](#score-calculator), [TicTacToe](#tictactoe)
+Link to each project's section on this page: [OCR](#ocr), [Regression](#regression), [Score Calculator](#score-calculator), [TicTacToe App](#tictactoe)
 
 # OCR:
 In this project, I created an android app that can recognize text in images from either existing images or from new images that can be taken from the camera directly from the app - this is a form of Optical Character Recognition (OCR). Further, it can also scan one or multiple barcode/QR codes from a single picture and display the raw data and format type - it supports 13 different barcode/QR code formats. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
@@ -70,7 +70,7 @@ In the above screenshots we can see the state of the program when it first launc
 #### Frame.java
 [Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
 
-# TicTacToe:
+# TicTacToe App:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game; the app shows which player's turn it is and can also determine once a winner/tie has been achieved. 
 <p float="left">
   <img src="Screenshots/Screenshot_20220908-104452_TicTacToe.png" alt="screenshot of app first loaded" style="width:150px;">
