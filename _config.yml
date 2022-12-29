@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman
 title: Personal Projects - Arian Torshizi
-description: This website functions as a summary page for the github repository that can be found below. It contains my personal coding projects - OCR, Regression, Score Calculator, and TicTacToe.
+description: This website functions as a summary page for the github repository that can be found below. It contains my personal coding projects - OCR, Regression, Score Calculator, and TicTacToe App.
 plugins: 
 - jekyll-remote-theme
