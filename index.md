@@ -31,8 +31,8 @@ This project makes use of Tensorflow to train a machine learning algorithm that 
 
 <p float="left">
   <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:300px;">
-  <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:300px;">
-  <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:300px;">
+  <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:400px;">
+  <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:400px;">
  </p>
  
 Shown in the picture is an example loss vs epoch graph taken during training in the first image. In the second image, we can see the validation accuracy that was achieved with the dataset that the algorithm was not trained on. In the third image, we have an example screenshot showing the program training in progress. 
