@@ -1,5 +1,5 @@
-A brief description of each of the 3 projects can be found below as well as links to the code and screenshots.\
-Link to each project's section on this page: [OCR](#ocr), [Regression](#regression), [Score Calculator](#score-calculator), [TicTacToe](#tictactoe)
+A description of each of the projects can be found below as well as links to the code and screenshots.\
+Link to each project's section on this page: [OCR](#ocr), [Regression](#regression), [Score Calculator](#score-calculator), [TicTacToe App](#tictactoe)
 
 # OCR:
 In this project, I created an android app that can recognize text in images from either existing images or from new images that can be taken from the camera directly from the app - this is a form of Optical Character Recognition (OCR). Further, it can also scan one or multiple barcode/QR codes from a single picture and display the raw data and format type - it supports 13 different barcode/QR code formats. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
@@ -35,8 +35,8 @@ The second file, SKL_Regression, is a roughly functionally equivalent program us
 <p float="left">
   <img src="Screenshots/Figure_1.png" alt="learning curve example" style="width:350px;">
   <img src="Screenshots/Figure_2.png" alt="feature plot example" style="width:350px;">
-  <img src="Screenshots/Figure_3.png" alt="feature plot example" style="width:350px;">
-  <img src="Screenshots/Figure_4.png" alt="command line prediction example" style="width:350px;">
+  <img src="Screenshots/Figure_3.png" alt="feature plot example" style="width:375px;">
+  <img src="Screenshots/Figure_4.png" alt="command line prediction example" style="width:375px;">
  </p>
  
 The screenshots show an example of a learning curve that was given using the BGD program in the first screenshot as well as plots of different datasets' features vs. the true output as given in the training data - one set has 3 features and the other has 18 - to be used to visualize trends. An example of how to interact with the program through the command line in shown in the fourth screenshot. In all of these scenarios, housing data was used to predict prices. 
@@ -56,8 +56,8 @@ This project draws on the Java swing toolkit to create a Java program and GUI th
 <p float="left">
   <img src="Screenshots/Screenshot 2022-09-13 005317.png" alt="screenshot the starting state" style="width:325px;">
   <img src="Screenshots/Screenshot 2022-09-13 005719.png" alt="example score 1" style="width:325px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="example score 2" style="width:375px;">
-  <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:375px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005414.png" alt="example score 2" style="width:325px;">
+  <img src="Screenshots/Screenshot 2022-09-13 005620.png" alt="screenshot error due to inputted score" style="width:325px;">
 </p>
  
 In the above screenshots we can see the state of the program when it first launched as well two example scores with the correct final scores shown based on the inputs, respectively. In the last image, we see the result of an incorrect/impossible score being inputted and the error message that is shown as a result - this is because of the score of 11 being inputted in the last frame which is not possible in a standard game of bowling. 
@@ -70,7 +70,7 @@ In the above screenshots we can see the state of the program when it first launc
 #### Frame.java
 [Frame.java](https://github.com/atorshizi/Personal_Projects/blob/main/Score%20Finder/Frame.java)
 
-# TicTacToe:
+# TicTacToe App:
 This folder contains all of the files used to create an Android app of the classic TicTacToe game; the app shows which player's turn it is and can also determine once a winner/tie has been achieved. 
 <p float="left">
   <img src="Screenshots/Screenshot_20220908-104452_TicTacToe.png" alt="screenshot of app first loaded" style="width:150px;">
