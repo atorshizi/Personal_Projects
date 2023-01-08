@@ -103,6 +103,7 @@ Y = np.array(Y)
 
 ep=50
 # callbacks=tf.keras.callbacks.EarlyStopping(monitor='loss',mode='min',patience=5,restore_best_weights=True)
+print(len(X))
 history = model.fit(X,Y,epochs=ep,batch_size=32)
 model.save(savePath)
 YS = []
