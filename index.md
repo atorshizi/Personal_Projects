@@ -31,7 +31,7 @@ This project makes use of Tensorflow to train a machine learning algorithm that 
 
 <p float="left">
   <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:300px;">
-  <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:400px;">
+  <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:300px;">
   <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:400px;">
  </p>
  
