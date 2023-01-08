@@ -30,7 +30,7 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 This project makes use of Tensorflow to train a machine learning algorithm that can classify inputed emails based on if they are spam emails or not - it uses a neural network with two hidden layers to do so. Two files are provided to train the model and to evaluate the accuracy - TrainModel.py separates the full dataset such that roughly 80% is used for training and 20% for validation to be done in TestModel.py. In testing, it achieved a validation accuracy of over 96%.
 
 <p float="left">
-  <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:300px;">
+  <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:350px;">
   <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:300px;">
   <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:400px;">
  </p>
