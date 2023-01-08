@@ -13,8 +13,8 @@ for i in range(10000):
     wordBank[word] = i
 fl.close()
 
-model = Sequential([Dense(units=1000, activation='relu'),
-                    Dense(units=250, activation='relu'),
+model = Sequential([Dense(units=500, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.02)),
+                    Dense(units=200, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.02)),
                     Dense(units=1, activation='sigmoid')
                    ])
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), loss=tf.keras.losses.BinaryCrossentropy(), metrics=['accuracy'])
@@ -101,7 +101,7 @@ for currFile in files:
 X = np.array(X)
 Y = np.array(Y)
 
-ep=20
+ep=50
 # callbacks=tf.keras.callbacks.EarlyStopping(monitor='loss',mode='min',patience=5,restore_best_weights=True)
 history = model.fit(X,Y,epochs=ep,batch_size=32)
 model.save(savePath)
@@ -110,6 +110,3 @@ for i in range(ep-1):
     YS.append(i+2)
 plt.scatter(YS,history.history['loss'][1:])
 plt.show()
-# X_test = np.array([X[0]])
-# print(X_test)
-# print(model.predict(X_test))

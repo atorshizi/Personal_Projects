@@ -69,7 +69,7 @@ My_model = tf.keras.models.load_model(savePath)
 X_test = np.array(xTest)
 output = My_model.predict(X_test)
 
-threshold = 0.9
+threshold = 0.5
 tot = 0
 incorrect = 0
 # for elem in output:
@@ -87,10 +87,10 @@ for i in range(len(output)):
         classified.append(0) 
     else:
         classified.append(1)
-print(classified)
 for elem in classified:
     tot += 1
     elem -= Y[tot-1]
     if (elem != 0):
         incorrect += 1
 print("Accuracy: " + str((tot-incorrect)/tot))
+input()
