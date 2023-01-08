@@ -27,7 +27,7 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
 
 # Classification:
-This project makes use of Tensorflow to train a machine learning algorithm that can classify inputed emails based on if they are spam emails or not - it uses a neural network with two hidden layers to do so. Two files are provided to train the model and to evaluate the accuracy - TrainModel.py separates the full dataset such that roughly 80% is used for training and 20% for validation to be done in TestModel.py. In testing, it achieved a validation accuracy of over 96%.
+This project makes use of Tensorflow to train a machine learning algorithm that can classify inputed emails based on if they are spam emails or not - it uses a neural network with two hidden layers to do so. Two files are provided to train the model and to test the accuracy - TrainModel.py separates the full dataset such that roughly 80% is used for training and 20% for testing to be done in TestModel.py. In testing, it achieved an accuracy of over 96%.
 
 <p float="left">
   <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:325px;">
@@ -35,7 +35,7 @@ This project makes use of Tensorflow to train a machine learning algorithm that 
   <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:400px;">
  </p>
  
-Shown in the picture is an example loss vs epoch graph taken during training in the first image. In the second image, we can see the validation accuracy that was achieved with the dataset that the algorithm was not trained on. In the third image, we have an example screenshot showing the program training in progress. 
+Shown in the picture is an example loss vs epoch graph taken during training in the first image. In the second image, we can see the accuracy that was achieved with the dataset that the algorithm was not trained on. In the third image, we have an example screenshot showing the program training in progress. 
 
 ### The main code can be found at the below links:
 
