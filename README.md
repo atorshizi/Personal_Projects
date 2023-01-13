@@ -26,6 +26,25 @@ Above, we can see the startup page of the app, as well as a demo in which the us
 #### .apk file
 [app/OCR.apk](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/OCR.apk)
 
+# Classification:
+This project makes use of Tensorflow to train a machine learning algorithm that can classify inputed emails based on if they are spam emails or not - it uses a neural network with two hidden layers to do so. Two files are provided to train the model and to test the accuracy - TrainModel.py separates the full dataset such that roughly 80% is used for training and 20% for testing to be done in TestModel.py. In testing, it achieved an accuracy of over 96%.
+
+<p float="left">
+  <img src="Screenshots/CL1.png" alt="an example a loss vs epoch graph during training" style="width:325px;">
+  <img src="Screenshots/CL2.png" alt="Screenshot of achieved validation accuracy" style="width:300px;">
+  <img src="Screenshots/CL3.png" alt="Screenshot of training in progress" style="width:400px;">
+ </p>
+ 
+Shown in the picture is an example loss vs epoch graph taken during training in the first image. In the second image, we can see the accuracy that was achieved with the dataset that the algorithm was not trained on. In the third image, we have an example screenshot showing the program training in progress. 
+
+### The main code can be found at the below links:
+
+#### TrainModel.py
+[Classification/TrainModel.py](https://github.com/atorshizi/Personal_Projects/blob/main/Classification/TrainModel.py)
+
+#### TestModel.py
+[Classification/TestModel.py](https://github.com/atorshizi/Personal_Projects/blob/main/Classification/TestModel.py)
+
 
 # Regression:
 This is an implementation of a regression program - a form of supervised machine learning - that can handle datasets with multiple features. There are two main files within it: Custom_BGD_Regression and SKL_Regression. The custom implementation minimizes the squared-error cost function using batch gradient descent. It processes a .csv file to use as the training data and allows users to change the default values of the learning rate, maximum number of iterations of the gradient descent, and the epsilon value that is used to determine the convergence of the gradient descent. Once trained, the developed model can be used to predict values for other examples. Using matplotlib, plots of the learning curve and individual features can be shown. 
