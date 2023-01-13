@@ -70,44 +70,13 @@ for currFile in files:
     except:
         continue
 
-
-# files = os.listdir(goodPath)
-# for currFile in files:
-#     try:
-#         if (rand.randint(0,100)%10 <= 8):
-#             X.append(open(goodPath + "\\" + str(currFile)).read())
-#             Y.append([0])
-#         else:
-#             newFile = open(goodPathTest + "\\" + str(currFile),"x")
-#             newFile.write(open(goodPath + "\\" + str(currFile)).read())
-#     except:
-#         continue
-# files = os.listdir(spamPath)
-# for currFile in files:
-#     try:
-#         if (rand.randint(0,100)%10 <= 8):
-#             X.append(open(spamPath + "\\" + str(currFile)).read())
-#             Y.append([1])
-#         else:
-#             newFile = open(spamPathTest + "\\" + str(currFile),"x")
-#             newFile.write(open(spamPath + "\\" + str(currFile)).read())
-#     except:
-#         continue
-
-# tok = tf.keras.preprocessing.text.Tokenizer(num_words=50000)
-# tok.fit_on_texts(texts=X)
-# X = tok.texts_to_sequences(X)
-# X = tf.keras.preprocessing.sequence.pad_sequences(X)
 X = np.array(X)
 Y = np.array(Y)
 
-ep=50
-# callbacks=tf.keras.callbacks.EarlyStopping(monitor='loss',mode='min',patience=5,restore_best_weights=True)
-print(len(X))
-history = model.fit(X,Y,epochs=ep,batch_size=32)
+history = model.fit(X,Y,epochs=50,callbacks=[tf.keras.callbacks.EarlyStopping(monitor='loss',mode='min',patience=5,restore_best_weights=True)])
 model.save(savePath)
 YS = []
-for i in range(ep-1):
+for i in range(len(history.history['loss'])-1):
     YS.append(i+2)
 plt.scatter(YS,history.history['loss'][1:])
 plt.show()

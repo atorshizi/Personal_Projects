@@ -15,20 +15,6 @@ fl.close()
 
 xTest = []
 Y = []
-# files = os.listdir(goodPathTest)
-# for currFile in files:
-#     try:
-#         xTest.append(open(goodPathTest + "\\" + str(currFile)).read())
-#         Y.append([0])
-#     except:
-#         continue
-# files = os.listdir(spamPathTest)
-# for currFile in files:
-#     try:
-#         xTest.append(open(spamPathTest + "\\" + str(currFile)).read())
-#         Y.append([1])
-#     except:
-#         continue
 files = os.listdir(goodPathTest)
 for currFile in files:
     Y.append(0)
@@ -58,10 +44,6 @@ for currFile in files:
         continue
     xTest.append(newList)
 
-# tok = tf.keras.preprocessing.text.Tokenizer(num_words=50000)
-# tok.fit_on_texts(texts=xTest)
-# xTest = tok.texts_to_sequences(xTest)
-# xTest = tf.keras.preprocessing.sequence.pad_sequences(xTest,11939)
 xTest = np.array(xTest)
 Y = np.array(Y)
 
@@ -72,15 +54,6 @@ output = My_model.predict(X_test)
 threshold = 0.5
 tot = 0
 incorrect = 0
-# for elem in output:
-#     if (elem[0] <= threshold):
-#         elem[0] = 0
-#     else:
-#         elem[0] = 1
-#     tot += 1
-#     elem[0] -= Y[tot-1]
-#     if (elem[0] != 0):
-#         incorrect += 1
 classified = []
 for i in range(len(output)):
     if (output[i] <= threshold):
