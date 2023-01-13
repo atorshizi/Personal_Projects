@@ -20,7 +20,6 @@ model = Sequential([Dense(units=500, activation='relu', kernel_regularizer=tf.ke
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), loss=tf.keras.losses.BinaryCrossentropy(), metrics=['accuracy'])
 
 Y = []
-# X = []
 
 goodPath = "C:\\Users\\ators\\Documents\\Personal_Projects\\Classification\\Datasets\\full\\all\\good"
 spamPath = "C:\\Users\\ators\\Documents\\Personal_Projects\\Classification\\Datasets\\full\\all\\spam"
