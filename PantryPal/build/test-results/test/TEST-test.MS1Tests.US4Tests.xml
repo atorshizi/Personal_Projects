@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.MS1Tests.US4Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-06T08:05:16" hostname="Tharuns-MacBook-Pro.local" time="5.456">
+  <properties/>
+  <testcase name="testEdit()" classname="test.MS1Tests.US4Tests" time="5.456"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

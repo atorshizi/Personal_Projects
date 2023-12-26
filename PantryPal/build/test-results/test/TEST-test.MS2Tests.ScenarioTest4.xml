@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.MS2Tests.ScenarioTest4" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-06T08:05:25" hostname="Tharuns-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="MS2ScenarioTest4()" classname="test.MS2Tests.ScenarioTest4" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

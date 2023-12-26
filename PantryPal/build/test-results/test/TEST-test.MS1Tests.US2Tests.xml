@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.MS1Tests.US2Tests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-06T08:04:41" hostname="Tharuns-MacBook-Pro.local" time="0.009">
+  <properties/>
+  <testcase name="testFileReading()" classname="test.MS1Tests.US2Tests" time="0.004"/>
+  <testcase name="testRecipeFileExists()" classname="test.MS1Tests.US2Tests" time="0.001"/>
+  <testcase name="testConnectToDB()" classname="test.MS1Tests.US2Tests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

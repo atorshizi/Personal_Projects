@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.MS2Tests.ScenarioTest3" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-06T08:05:25" hostname="Tharuns-MacBook-Pro.local" time="0.048">
+  <properties/>
+  <testcase name="testScenario()" classname="test.MS2Tests.ScenarioTest3" time="0.048"/>
+  <system-out><![CDATA[http://localhost:8100/test/
+Error: java.net.ConnectException: Connection refused
+Server started on port 8100
+http://localhost:8100/test/
+Received: Invalid GET Request
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+    test{
+        java{
+            srcDirs = ['src']
+        }
+    }
+}
+dependencies {
+    def junitVersion = '5.8.1'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation 'org.json:json:20090211'
+
+    implementation "org.junit.jupiter:junit-jupiter:$junitVersion"
+
+    implementation 'org.mongodb:bson:4.11.0'
+    implementation 'org.mongodb:mongodb-driver-sync:4.11.0'
+
+    
+    //Implementations for junit tests
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+
+}
+javafx {
+    version = "21.0.1"
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}
+test {
+    useJUnitPlatform()
+}
+apply plugin :"java"
+ext{
+    javaMainClass = "main.java.client.Main"
+}
+application {
+    mainClassName = javaMainClass
+}
