@@ -1,4 +1,4 @@
-A description of each of the projects can be found below as well as links to the code and screenshots.\ 
+A description of each of the projects can be found below as well as links to the code and screenshots.\
 Link to each project's section on this page: [PantryPal](#pantrypal), [OCR](#ocr), [Classification](#classification), [Regression](#regression), [Score Calculator](#score-calculator), [TicTacToe App](#tictactoe)
 
 # PantryPal: 
