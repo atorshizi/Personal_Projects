@@ -10,7 +10,7 @@ This project is a desktop app that can generate and store recipes for food. Reci
   <img src="Screenshots/home.png" alt="screenshot taking a picture" style="width:200px;"> 
  </p> 
  
-Above, we can see the... 
+Above we can see the login screen for the app where the user can log in with their credentials or create a new account by giving a username and password. Then, once logged in, the user is shown the home screen (picture 3) where they can access previous saved recipes or add a new recipe. With the "remember me" feature in the log in screen, the user can bypass logging in in the future on the current device. 
 
 <p float="left">
   <img src="Screenshots/rec.png" alt="screenshot of app first loaded" style="width:200px;"> 
@@ -18,7 +18,7 @@ Above, we can see the...
   <img src="Screenshots/gen.png" alt="screenshot taking a picture" style="width:200px;"> 
  </p>
  
-Above, we can see the... 
+Here we can see the process for creating a new recipe. The user must first record the type of meal and the ingredients they want to use. Then, they are shown a confirmation page where they can manually or choose to have ChatGPT and DALL-E find a new recipe and picture with the same ingredients. 
 
 <p float="left">
   <img src="Screenshots/list.png" alt="screenshot of app first loaded" style="width:400px;"> 
@@ -26,12 +26,11 @@ Above, we can see the...
   <img src="Screenshots/det.png" alt="screenshot taking a picture" style="width:400px;"> 
  </p>
  
-Above, we can see the... 
+Above, we see how the user car can access previously saved recipes. A list of recipes are shown and can be sorted (by name or time of generation) and/or filtered (by meal type). By clicking on a recipe we can access a detailed page of the ingredients, instructions, and image. 
 
-### The main code can be found at the below links:
+### The main code can be found at the below link: 
 
-#### Source Files 
-[app/src/main/java/com/example/ocr/MainActivity.java](https://github.com/atorshizi/Personal_Projects/blob/main/OCR/app/src/main/java/com/example/ocr/MainActivity.java)
+[Source Code](https://github.com/atorshizi/Personal_Projects/tree/79628b268bd6d09c629dfae177248366346acb40/PantryPal/src) 
 
 
 
