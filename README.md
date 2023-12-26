@@ -15,7 +15,7 @@ Above we can see the login screen for the app where the user can log in with the
 <p float="left">
   <img src="Screenshots/rec.png" alt="screenshot of app first loaded" style="width:250px;"> 
   <img src="Screenshots/recing.png" alt="screenshot taking a picture" style="width:250px;"> 
-  <img src="Screenshots/gen.png" alt="screenshot taking a picture" style="width:350px;"> 
+  <img src="Screenshots/gen.png" alt="screenshot taking a picture" style="width:400px;"> 
  </p>
  
 Here we can see the process for creating a new recipe. The user must first record the type of meal and the ingredients they want to use. Then, they are shown a confirmation page where they can manually or choose to have ChatGPT and DALL-E find a new recipe and picture with the same ingredients. 
