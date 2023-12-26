@@ -21,8 +21,8 @@ Above, we can see the...
 Above, we can see the... 
 
 <p float="left">
-  <img src="Screenshots/list.png" alt="screenshot of app first loaded" style="width:200px;"> 
-  <img src="Screenshots/filt.png" alt="screenshot taking a picture" style="width:200px;"> 
+  <img src="Screenshots/list.png" alt="screenshot of app first loaded" style="width:400px;"> 
+  <img src="Screenshots/filt.png" alt="screenshot taking a picture" style="width:400px;"> 
   <img src="Screenshots/det.png" alt="screenshot taking a picture" style="width:200px;"> 
  </p>
  
