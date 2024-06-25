@@ -1,0 +1,37 @@
+{
+  "name": "cse110-sp21-group02",
+  "version": "1.0.0",
+  "description": "We are creating a web-app incorporating generative AI.",
+  "scripts": {
+    "test": "npx jest --config jest.config.integration.js",
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "auto-lint-js": "npx eslint ./source/**/*.js --fix",
+    "start-server": "npx http-server -p 5500",
+    "coverage": "jest --collect-coverage"
+  },
+  "author": "cse110-sp23-group02",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.7",
+    "eslint": "^8.42.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "http-server": "^14.1.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-environment-puppeteer": "^9.0.0",
+    "jest-puppeteer": "^9.0.0",
+    "jsdoc": "^4.0.2",
+    "puppeteer": "^22.10.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/firebasecode/functions/tests/index.test.js",
+      "<rootDir>/source/__tests__/unit/localStorage.test.js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/firebasecode/**",
+      "!**/source/__tests__/unit/localStorage.test.js"
+    ]
+  }
+}

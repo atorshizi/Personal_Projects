@@ -1,0 +1,12 @@
+{
+  "source": {
+    "include": ["./source"]
+  },
+  "opts": {
+    "destination": "./docs/jsdoc"
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": false
+  }
+}

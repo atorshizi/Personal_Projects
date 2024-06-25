@@ -1,0 +1,31 @@
+name: Coverage Tests
+
+on:
+  push:
+    branches: [dev, main,dev_test]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Start local server
+        run: |
+          npm run start-server & # Run the server as a background process
+          sleep 5 # Give the server time to start
+          echo "Local server started"
+        
+      - name: Run coverage
+        run: yarn coverage

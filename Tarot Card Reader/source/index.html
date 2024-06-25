@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tarot Card Reader</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+</head>
+
+<body>
+
+    <script type="module" src="firebaseInit.js"></script>
+    <!-- Login/Signup -->
+    <div class="cloud-link-container">
+        <a href="#" id="authlink" class="cloud-link">Login/SignUp</a>
+    </div>
+    <script type="module" src="authLink.js"></script>
+
+    <!-- Title -->
+    <h1>Tarot Card Reader</h1>
+
+    <!-- Navbar -->
+    <nav class="nav">
+        <a href="#" class="nav-item active" id="nav-btn-home">Home</a>
+        <a href="#" class="nav-item" id="nav-btn-daily-fortune">Daily Fortune</a>
+        <a href="#" class="nav-item" id="nav-btn-history">History</a>
+        <span class="nav-indicator"></span>
+    </nav>
+
+    <!-- Main Display -->
+    <div class="card-container">
+        <div class="cardflip">
+            <div class="front" id="display1">
+                <img src="./images/default-card.jpeg" id="display-img-left" alt="">
+            </div>
+            <div class="back">
+                <img src="./images/card-back.png" id="display-back-left" alt="">
+                <div class="card-text">
+                    <h3 class="card-title">First Card</h3>
+                    <textarea class="cardmeaning" rows="13" cols="24">Text Here</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="cardflip">
+            <div class="front" id="display2">
+                <img src="./images/default-card.jpeg" id="display-img-mid" alt="">
+            </div>
+            <div class="back">
+                <img src="./images/card-back.png" id="display-back-mid" alt="">
+                <div class="card-text">
+                    <h3 class="card-title">Second Card</h3>
+                    <textarea class="cardmeaning" rows="13" cols="24">Text Here</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="cardflip">
+            <div class="front" id="display3">
+                <img src="./images/default-card.jpeg" id="display-img-right" alt="">
+            </div>
+            <div class="back">
+                <img src="./images/card-back.png" id="display-back-right" alt="">
+                <div class="card-text">
+                    <h3 class="card-title">Third Card</h3>
+                    <textarea class="cardmeaning" rows="13" cols="24">Text Here</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meaning Box -->
+    <section id="meaning-section">
+        <div id="meaning">Meaning</div>
+    </section>
+
+    <!-- Save Button -->
+    <button id="save">Save</button>
+
+    <!-- Generation Selection -->
+    <section id="fortune-generating">
+        <div class="container-col">
+            <!-- Dropdown Input Box (populated by backend) -->
+            <select id="question-list"></select>
+            <!-- Generate Button -->
+            <button id="generate-btn">Generate</button>
+        </div>
+    </section>
+
+    <!-- Daily Fortune -->
+    <section id="daily-fortune-section">
+        <div class="container-col">
+            <button id="daily-generate-btn">Generate</button>
+        </div>
+        <div id="loading-animation" class="hide">
+            <div class="loader"></div>
+        </div>
+    </section>
+    
+
+    <!-- History -->
+    <section id="history-section">
+        <div class="container-col">
+            <h2>Daily Fortune</h2>
+            <div class="calendar" id="calendar">
+                <div>
+                    <h3>Sunday</h3>
+                    <div id="fortune-0"></div>
+                </div>
+                <div>
+                    <h3>Monday</h3>
+                    <div id="fortune-1"></div>
+                </div>
+                <div>
+                    <h3>Tuesday</h3>
+                    <div id="fortune-2"></div>
+                </div>
+                <div>
+                    <h3>Wednesday</h3>
+                    <div id="fortune-3"></div>
+                </div>
+                <div>
+                    <h3>Thursday</h3>
+                    <div id="fortune-4"></div>
+                </div>
+                <div>
+                    <h3>Friday</h3>
+                    <div id="fortune-5"></div>
+                </div>
+                <div>
+                    <h3>Saturday</h3>
+                    <div id="fortune-6"></div>
+                </div>
+            </div>
+            <h2>Local History</h2>
+            <div class="container-col" id="history"></div>
+        </div>
+    </section>
+    <div class="overlay" id="overlay"></div>
+    <div class="card" id="card">
+        <h3 id="card-title"></h3>
+        <div id="card-1"></div>
+        <div id="card-2"></div>
+        <div id="card-3"></div>
+        <div id="fortune-text"></div>
+        <div class="center-button">
+            <button onclick="closeCard()" id="close-btn-card">Close</button>
+        </div>
+    </div>
+    <!-- Renaming Popup for History -->
+    <section>
+        <div id="popup" class="popup-container">
+            <div class="popup-box">
+                <input type="text" id="new-name"/>
+                <button id="popup-rename-btn">Rename</button>
+                <button id="popup-close-btn">Close</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Day Click Popup -->
+    <section>
+        <div id="day-popup" class="popup-container">
+            <div class="popup-box">
+                <button id="close-day-popup" class="close-popup-btn">Close</button>
+                <div id="day-popup-body"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Main Script File-->
+    <script type="module" src="scripts.js"></script>
+    <script type="module" src="vertexAI.js"></script>
+
+</body>
+<script>
+    function closeCard() {
+        document.getElementById('card').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
+</html>
