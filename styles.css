@@ -75,7 +75,7 @@ details p {
 
 .hero a:link, a:visited{ 
     font-size: 1.1em;
-    border: 3px #5f5f5f solid; 
+    border: 3px #5d5d5d solid; 
     color: white; 
     text-decoration: none; 
     background: linear-gradient(45deg, #66cdaa, #5b9bd5); 
@@ -85,5 +85,16 @@ details p {
 .hero a:hover, a:focus{ 
     padding: 1.105%; 
     font-size: 1.105em;
+} 
+
+.vertical-menu a{ 
+    font-size: 1.0em;
+    color: #0072ff; 
+} 
+.vertical-menu a:hover { 
+    font-size: 1.03em;
 }
 
+img { 
+    border-radius: 0.8vw;
+}
