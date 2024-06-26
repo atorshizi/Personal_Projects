@@ -18,19 +18,16 @@
     </section>
   </header>
   <div class="menu-container"> 
-    <div class="vertical-menu-L"> 
       <button class="btn-open-popup" onclick="togglePopup('tcr-content')">Tarot Card Reader</button> 
       <button class="btn-open-popup" onclick="togglePopup('PanPal-content')">PantryPal</button> 
+      <button class="btn-open-popup" onclick="togglePopup('OCR-content')">OCR Android App</button> 
+      <button class="btn-open-popup" onclick="togglePopup('idle-content')">Multi-Tab Support for Python IDLE</button> 
+      <button class="btn-open-popup" onclick="togglePopup('FRec-content')">Face Recognition</button> 
+      <button class="btn-open-popup" onclick="togglePopup('spam-content')">Email Spam Filter</button> 
       <button class="btn-open-popup" onclick="togglePopup('ASIC-content')">Custom ASIC + Encoder and Decoder</button> 
+      <button class="btn-open-popup" onclick="togglePopup('reg-content')">Gradient Descent Implementation for Regression</button> 
       <button class="btn-open-popup" onclick="togglePopup('calc-content')">Score Calculator</button> 
       <button class="btn-open-popup" onclick="togglePopup('ttt-content')">TicTacToe Android App</button> 
-    </div> 
-    <div class="vertical-menu-R"> 
-      <button class="btn-open-popup" onclick="togglePopup('FRec-content')">Face Recognition</button> 
-      <button class="btn-open-popup" onclick="togglePopup('OCR-content')">OCR</button> 
-      <button class="btn-open-popup" onclick="togglePopup('spam-content')">Email Spam Filter</button> 
-      <button class="btn-open-popup" onclick="togglePopup('reg-content')">Gradient Descent Implementation for Regression</button> 
-    </div> 
   </div> 
 
   <!-- Tarot Card Reader  -->
@@ -99,13 +96,13 @@
 
         <p>In this project, I created an android app that can recognize text in images from either existing images or from new images that can be taken from the camera directly from the app - this is a form of Optical Character Recognition (OCR). Further, it can also scan one or multiple barcode/QR codes from a single picture and display the raw data and format type - it supports 13 different barcode/QR code formats. It accomplishes these tasks by incorporating the Google ML Kit SDK. 
           <p float="left">
-            <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:200px;">
-            <img src="Screenshots/Screenshot_20220909-014226_Camera.png" alt="screenshot taking a picture" style="width:200px;">
-            <img src="Screenshots/Screenshot_20220909-014237_OCR.png" alt="screenshot of processed image" style="width:200px;">
-            <img src="Screenshots/Screenshot_20220909-014800_Camera.png" alt="screenshot of taking a picture" style="width:200px;">
-            <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of processed QR" style="width:200px;">
-            <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of processed barcode" style="width:200px;">
-            </p> 
+            <img src="Screenshots/Screenshot_20220909-014106_OCR.png" alt="screenshot of app first loaded" style="width:160px;">
+            <img src="Screenshots/Screenshot_20220909-014226_Camera.png" alt="screenshot taking a picture" style="width:160px;">
+            <img src="Screenshots/Screenshot_20220909-014237_OCR.png" alt="screenshot of processed image" style="width:160px;">
+            <img src="Screenshots/Screenshot_20220909-014800_Camera.png" alt="screenshot of taking a picture" style="width:160px;">
+            <img src="Screenshots/Screenshot_20220909-014652_OCR.png" alt="screenshot of processed QR" style="width:160px;">
+            <img src="Screenshots/Screenshot_20220909-014540_OCR.png" alt="screenshot of processed barcode" style="width:160px;">
+          </p> 
             <p>Above, we can see the startup page of the app, as well as a demo in which the user takes a picture a sentence in the app and the sentence is then processed and shown below the image taken in the app in text form (image 3). It also shows a demo in which a single barcode/QR code is scanned and the respective value is then given to the user. </p>                  
             <p>
               The main code and apk can be found at the below links:
@@ -120,6 +117,30 @@
     </div> 
 	</div> 
 
+    <!-- IDLE Mods  -->
+    <div id="idle-content" class="overlay-container"> 
+      <div class="popup-box"> 
+        <div class="c-btn-area"><button class="close-btn" onclick="togglePopup('idle-content')">X</button></div> 
+        <div class="pop-content"> 
+          <div class="title">Tarot Card Reader</div> 
+          <p>In this project multiple tab support for Python's built-in IDE (Python IDLE) was added. In the current production version of IDLE, each time a file is opened or created, an entirely new window is created which makes it very hard to navigate between files. Instead, in this modification to the open-source codebase, a new navigation bar is created that allows us to easily switch between opened or created files and to edit them much easier with a close button for each file for when they are no longer needed.</p>
+          <p>Below we can see the current version of idle when multiple files are opened.</p>
+          <p float="left">
+            <img src="Screenshots/IDLE Codebase Modification/before.png" style="width:600px;">
+          </p>
+          <p>Below, the modifications can be seen with the ability to switch between files and to close any opened files.</p>
+          <p float="left">
+            <img src="Screenshots/IDLE Codebase Modification/1.png" style="width:300px;">
+            <img src="Screenshots/IDLE Codebase Modification/3.png" style="width:300px;">
+          </p> 
+          <p>
+            The source code for IDLE with the modifications can be found at the below link: 
+            <br> 
+            <a target="_blank" href="https://github.com/atorshizi/Personal_Projects/blob/main/Multi-tab support for IDLE">Source Code</a> 
+          </p> 
+        </div> 
+      </div> 
+    </div> 
 
   <!-- ASIC  -->
   <div id="ASIC-content" class="overlay-container"> 
@@ -135,7 +156,7 @@
           <img src="Custom ASIC/op3.png" style="width:400px;">
           <img src="Custom ASIC/op4.png" style="width:400px;"> 
         </p> 
-        <p>Next, a custom assembler was created in pyton that translated any assembly code writen in the custom ISA to machine code that was loaded into the instruction ROM to be ran. The machine modules were coded in SystemVerilog and simulated in ModelSim and synthesized in Quartus. An overview of the machine and of one of the modules (the ALU) can be seen along with a brief section of the decoder written in the custom ISA</p>
+        <p>Next, a custom assembler was created in python that translated any assembly code writen in the custom ISA to machine code that was loaded into the instruction ROM to be ran. The machine modules were coded in SystemVerilog and simulated in ModelSim and synthesized in Quartus. An overview of the machine and of one of the modules (the ALU) can be seen along with a brief section of the decoder written in the custom ISA</p>
         <p float="left"> 
           <img src="Custom ASIC/overview.png" style="width:auto;">
           <img src="Custom ASIC/alu.png" style="width:700px;">
@@ -152,7 +173,12 @@
       <div class="c-btn-area"><button class="close-btn" onclick="togglePopup('FRec-content')">X</button></div> 
       <div class="pop-content"> 
         <div class="title">Face Recognition</div>
-        <p>TO BE ADDED</p>
+        <p>In this project, a face recognition pipeline was created to try and match up pictures to the person. First interest points were extracted using both unifrom and edge sampling (as can be seen in the first image below). The corner detector used OpenVC's harris corner detector. Then patches around the interest points were taken using regular patch feature extraction and SIFT feature extraction using OpenCV. A "visual vocabulary" was created K-means clusering using scikit-learn's KMeans model which was fitted on the features from the training data. The cluster centers were then used to obtain a feature vector for each image. Then, we use a K-nearest neigbor classifier with k=3 and k=5. The dimension of each feature was 128 and the number of clusters for k-means was 50.</p>
+        <p float="left"> 
+          <img src="Face Recognition/1.png" style="width:40%;">
+          <img src="Face Recognition/results.png" style="width:50%;">
+        </p> 
+        <p>Above, we can see that the ultimate best accuracy score was obtained with k=5, unifrom sampling, and SIFT feature detection with an accuracy of 94%.</p>
       </div> 
     </div> 
 	</div> 

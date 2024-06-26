@@ -46,19 +46,10 @@ main {
 } 
 
 .menu-container { 
-    width: 90; 
-}
-.vertical-menu-L { 
-    float: left;
-    width: 40vw;
-    margin-top: 2em; 
-    margin-left: 5em;
-} 
-.vertical-menu-R { 
-    float: right;
-    width: 40vw;
-    margin-top: 2em; 
-    margin-right: 5em;
+    display: grid; 
+    grid-template-columns: repeat(3,3fr); 
+    gap: 10px; 
+    margin: 2em 3em 1em 3em; 
 }
 
 .btn-open-popup { 
@@ -126,7 +117,10 @@ main {
 } 
 .popup-box a { 
     color: #0072ff; 
-}
+} 
+.popup-box a:hover { 
+    font-size: 1.05em;
+} 
 
 .c-btn-area { 
     position: fixed; 
@@ -134,10 +128,10 @@ main {
 }
 .close-btn { 
     color: #212121;
-    font-size: 1.2em;
+    font-size: 1.3em;
     background-color: #0000004b;
     border-color: #0072ff; 
-    border-radius: 20px;
+    border-radius: 100px;
     display: block; 
     position: relative; 
     margin-left: auto; 
@@ -155,6 +149,9 @@ main {
     margin-bottom: 1%; 
     font-size: 1.2em; 
     font-weight: bold; 
+} 
+img {
+    gap: 0;
 }
 /* Keyframes for fadeInUp animation */ 
 @keyframes fadeInUp { 
