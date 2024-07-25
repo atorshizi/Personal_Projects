@@ -84,41 +84,9 @@ body{
     color: white;
 } 
 
-<<<<<<< HEAD
 .btn-link a { 
     text-decoration: none; 
     color: white;
-=======
-.menu-container { 
-    width: 90; 
-}
-.vertical-menu-L { 
-    float: left;
-    width: 40vw;
-    margin-top: 2em; 
-    margin-left: 5em;
-} 
-.vertical-menu-R { 
-    float: right;
-    width: 40vw;
-    margin-top: 2em; 
-    margin-right: 5em;
-}
-
-.btn-open-popup { 
-    background-color: #ccc; 
-    border: 2px solid #2db054;
-    border-radius: 8px;
-    padding: 1em;
-    width: 100%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    color: #333; 
-    margin-bottom: 1.005em; 
->>>>>>> parent of 4f1b7ec (all current projects added)
 } 
 
 .bg-dark { 
@@ -137,69 +105,7 @@ body{
     box-shadow: 0px 0px 8px 1px #a51dffb8;
 } 
 
-<<<<<<< HEAD
 .px-4.py-5.my-5.text-center.col-sm{
-=======
-.popup-box p {
-    margin: 0.5em 0;
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.5;
-    border-left: 4px solid #0072ff; 
-    background-color: #f9f9f9; 
-    border-radius: 8px;
-    padding: 0.5em 2em 0.5em 2em; 
-    margin-right: 0.5em;
-    margin-left: 0.5em; 
-} 
-.popup-box a { 
-    color: #0072ff; 
-}
-
-.c-btn-area { 
-    position: fixed; 
-    width: 95%;
-}
-.close-btn { 
-    color: #212121;
-    font-size: 1.2em;
-    background-color: #0000004b;
-    border-color: #0072ff; 
-    border-radius: 20px;
-    display: block; 
-    position: relative; 
-    margin-left: auto; 
-    margin-right: 0px; 
-    margin-top: 0.5%; 
-} 
-.close-btn:hover { 
-    background-color: #2db054;
-}
-
-.title { 
-    color: white; 
-    text-shadow: -1px 1px 2px black; 
-    margin-top: 1%; 
-    margin-bottom: 1%; 
-    font-size: 1.2em; 
-    font-weight: bold; 
-}
-/* Keyframes for fadeInUp animation */ 
-@keyframes fadeInUp { 
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    } 
-
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    } 
-} 
-
-/* Animation for popup */ 
-.overlay-container.show { 
->>>>>>> parent of 4f1b7ec (all current projects added)
     display: flex; 
     flex-direction: column;
     justify-content: flex-end; 
