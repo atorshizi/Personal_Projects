@@ -1,0 +1,61 @@
+Date : 2024-08-25 23:29:43
+Directory : c:\Users\Arian\Documents\CIM-Project
+Total : 17 files,  498 codes, 60 comments, 99 blanks, all 657 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Java            |         13 |        367 |          4 |         57 |        428 |
+| Python          |          1 |         71 |         26 |         16 |        113 |
+| Batch           |          1 |         41 |         30 |         22 |         93 |
+| Java Properties |          2 |         19 |          0 |          4 |         23 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                             |         17 |        498 |         60 |         99 |        657 |
+| client                                                                                                                        |          1 |         71 |         26 |         16 |        113 |
+| server                                                                                                                        |         16 |        427 |         34 |         83 |        544 |
+| server (Files)                                                                                                                |          1 |         41 |         30 |         22 |         93 |
+| server\gradle                                                                                                                 |          1 |          7 |          0 |          1 |          8 |
+| server\gradle\wrapper                                                                                                         |          1 |          7 |          0 |          1 |          8 |
+| server\src                                                                                                                    |         14 |        379 |          4 |         60 |        443 |
+| server\src\main                                                                                                               |         13 |        370 |          4 |         55 |        429 |
+| server\src\main\java                                                                                                          |         12 |        358 |          4 |         52 |        414 |
+| server\src\main\java\com                                                                                                      |         12 |        358 |          4 |         52 |        414 |
+| server\src\main\java\com\example                                                                                              |         12 |        358 |          4 |         52 |        414 |
+| server\src\main\java\com\example\server_controller                                                                            |         12 |        358 |          4 |         52 |        414 |
+| server\src\main\resources                                                                                                     |          1 |         12 |          0 |          3 |         15 |
+| server\src\test                                                                                                               |          1 |          9 |          0 |          5 |         14 |
+| server\src\test\java                                                                                                          |          1 |          9 |          0 |          5 |         14 |
+| server\src\test\java\com                                                                                                      |          1 |          9 |          0 |          5 |         14 |
+| server\src\test\java\com\example                                                                                              |          1 |          9 |          0 |          5 |         14 |
+| server\src\test\java\com\example\server_controller                                                                            |          1 |          9 |          0 |          5 |         14 |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                                      | language        | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| c:\Users\Arian\Documents\CIM-Project\client\example.py                                                                        | Python          |         71 |         26 |         16 |        113 |
+| c:\Users\Arian\Documents\CIM-Project\server\gradle\wrapper\gradle-wrapper.properties                                          | Java Properties |          7 |          0 |          1 |          8 |
+| c:\Users\Arian\Documents\CIM-Project\server\gradlew.bat                                                                       | Batch           |         41 |         30 |         22 |         93 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\Creds.java                            | Java            |         16 |          0 |          2 |         18 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\ImageController.java                  | Java            |         48 |          1 |          5 |         54 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\Link.java                             | Java            |         30 |          0 |          2 |         32 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\LinkRepository.java                   | Java            |          8 |          0 |          3 |         11 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\Response.java                         | Java            |         15 |          0 |          2 |         17 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\RestServiceApplication.java           | Java            |          9 |          0 |          4 |         13 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\User.java                             | Java            |         30 |          0 |          2 |         32 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\UserController.java                   | Java            |         40 |          1 |          4 |         45 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\UserRepository.java                   | Java            |         10 |          0 |          4 |         14 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\jwtUtils.java                         | Java            |         42 |          0 |          3 |         45 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\s3Configs.java                        | Java            |         34 |          0 |          7 |         41 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\java\com\example\server_controller\s3service.java                        | Java            |         76 |          2 |         14 |         92 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\main\resources\application.properties                                         | Java Properties |         12 |          0 |          3 |         15 |
+| c:\Users\Arian\Documents\CIM-Project\server\src\test\java\com\example\server_controller\ServerControllerApplicationTests.java | Java            |          9 |          0 |          5 |         14 |
+| Total                                                                                                                         |                 |        498 |         60 |         99 |        657 |
++-------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+

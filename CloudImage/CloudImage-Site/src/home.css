@@ -1,0 +1,118 @@
+.welc{ 
+    display: flex; 
+    justify-content: center; 
+    margin:auto; 
+    z-index: 10; 
+    background-color: rgba(255, 255, 255, 0.75); 
+    border-radius: 20px; 
+    width: 900px; 
+    /* height:500px; */
+}
+    .side_by_side { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap:0; 
+        z-index: 10; 
+        box-sizing: border-box; 
+        padding: 2em; 
+    } 
+        .moto{ 
+            color:#0072ff; 
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            display: flex;
+            flex-direction: column; 
+        } 
+            .moto h1{ 
+                font-size: 3.5em; 
+                margin-bottom: 0; 
+                opacity: 1;
+            } 
+            .moto h3{ 
+                font-size: 1.1em;
+            } 
+            .moto_buttons{ 
+                display: grid; 
+                grid-template-columns: 1fr 1fr; 
+                height: 10%; 
+                width: 100%; 
+            }
+                .moto_buttons button { 
+                    margin: auto; 
+                    background-color: transparent; 
+                    border-color: transparent;
+                    background-color: white; 
+                    border: solid 2px #0072ff;
+                    height: 50px; 
+                    width: 150px; 
+                    position: relative; 
+                    color: #0072ff; 
+                    font-size: 1em; 
+                    transition: all 0.2s ease; 
+                    font-family: Tahoma, Geneva, Verdana, sans-serif; 
+                } 
+                .moto_buttons button::before { 
+                    content: ''; 
+                    position: absolute; 
+                    bottom: 0; 
+                    left: 0; 
+                    transform: translateX(4%) translateY(13%); 
+                    width: 100%; 
+                    height:100%; 
+                    background-color: #0072ff; 
+                    transition: all 0.13s ease; 
+                    z-index:-1;
+                } 
+
+                .moto_buttons button:hover::before { 
+                    content: ''; 
+                    position: absolute; 
+                    bottom: 0; 
+                    left: 0; 
+                    transform: translateX(0%) translateY(0%); 
+                    width: 100%; 
+                    height: 100%; 
+                } 
+        .welc_images{ 
+            display: flex;
+            width: 100%; 
+            height: 100%;
+            margin:0;
+        } 
+            .welc_images img{ 
+                width: 100%; 
+                height: auto; 
+                background-color: white;
+                border-radius: 20px; 
+                margin: auto;
+            } 
+        @media (max-width: 1300px) { 
+            .side_by_side { 
+                grid-template-columns: 1fr; 
+            } 
+            .welc{
+                width: 500px; 
+                padding: 1.3em;
+                transform: scale(0.8); 
+            } 
+            .welc_images{ 
+                display: flex; 
+                justify-content: center; 
+            }
+            .welc_images img{ 
+                width: 80%; 
+            }
+            .moto{ 
+                padding-bottom: 2em;
+            } 
+            .moto h1{ 
+                margin: 0;
+            } 
+            .moto_buttons button{ 
+                width: 70%;
+            }
+        } 
+        @media (max-width: 500px) { 
+            .welc { 
+                width: 300px; 
+            } 
+        }
