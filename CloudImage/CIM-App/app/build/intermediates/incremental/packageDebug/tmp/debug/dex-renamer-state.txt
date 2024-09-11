@@ -1,0 +1,19 @@
+#Wed Sep 11 13:56:30 PDT 2024
+base.0=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.4=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.5=C\:\\Users\\Arian\\Documents\\CIM-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=11/classes.dex
+path.3=12/classes.dex
+path.4=2/classes.dex
+path.5=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex
+renamed.4=classes5.dex
+renamed.5=classes6.dex

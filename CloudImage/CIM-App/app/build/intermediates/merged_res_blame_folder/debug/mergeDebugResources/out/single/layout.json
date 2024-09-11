@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\content_main.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "com.example.cloudimage.app-mergeDebugResources-44:/layout/fragment_gallery.xml",
+        "source": "com.example.cloudimage.app-main-47:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\fragment_create.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\fragment_create.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\nav_header_main.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\single_view.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\single_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\app_bar_gallery.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\app_bar_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\app_bar_main.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-mergeDebugResources-44:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Arian\\.gradle\\daemon\\8.7\\com.example.cloudimage.app-main-47:\\layout\\activity_main.xml"
+    }
+]
