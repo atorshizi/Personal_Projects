@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arian Torshizi - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="section page-section">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A collection of my recent works and projects</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- TockOS -->
+            <div class="project-card fade-in" onclick="openModal('tockos')">
+                <div class="project-content">
+                    <h3 class="project-title">Embedded TockOS on ENTS Board</h3>
+                    <p class="project-description">SDI-12 protocol implementation for TockOS kernel in Rust, with user-space sensor apps transmitting data over LoRaWAN.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Rust</span>
+                        <span class="project-tag embedded">Operating Systems</span>
+                        <span class="project-tag embedded">STM32</span>
+                        <span class="project-tag embedded">ESM32</span>
+                        <span class="project-tag">LoRaWAN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom ASIC -->
+            <div class="project-card fade-in" onclick="openModal('asic')">
+                <div class="project-content">
+                    <h3 class="project-title">Custom ASIC Encoder/Decoder</h3>
+                    <p class="project-description">Application-specific CPU design based on MIPS architecture for Viterbi encoding/decoding with custom ISA and encoding/decoding programs written in assembly.</p>
+                    <div class="project-tags">
+                        <span class="project-tag embedded">SystemVerilog</span>
+                        <span class="project-tag embedded">MIPS</span>
+                        <span class="project-tag">ModelSim</span>
+                        <span class="project-tag embedded">ASIC</span>
+                        <span class="project-tag">Quartus Prime</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in" onclick="openModal('mac')">
+                <div class="project-content">
+                    <h3 class="project-title">2D Systolic Array AI Accelerator</h3>
+                    <p class="project-description">
+                        Reconfigurable FPGA-based 2D systolic array accelerator with tiling,
+                        clock gating, in-place accumulation, and configurable activations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag embedded">FPGA</span>
+                        <span class="project-tag embedded">SystemVerilog</span>
+                        <span class="project-tag embedded">Systolic Arrays</span>
+                        <span class="project-tag ai">NPU</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CloudImage -->
+            <div class="project-card fade-in" onclick="openModal('cloud')">
+                <div class="project-content">
+                    <h3 class="project-title">CloudImage</h3>
+                    <p class="project-description">Full-stack cloud storage platform with AWS integration, Spring Boot backend, React frontend, and Android app for seamless image management across devices.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Spring Boot</span>
+                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Android</span>
+                        <span class="project-tag">Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DCGAN Emoji Generator -->
+            <div class="project-card fade-in" onclick="openModal('dcgan')">
+                <div class="project-content">
+                    <h3 class="project-title">DCGAN Emoji Generator</h3>
+                    <p class="project-description">Re-implementation of DCGAN to generate emoji images, with latent space exploration and custom training strategies to combat mode collapse.</p>
+                    <div class="project-tags">
+                        <span class="project-tag ai">PyTorch</span>
+                        <span class="project-tag ai">DCGAN</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag ai">CNN</span>
+                        <span class="project-tag ai">Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarot Reader -->
+            <div class="project-card fade-in" onclick="openModal('tarot')">
+                <div class="project-content">
+                    <h3 class="project-title">Tarot Card Reader</h3>
+                    <p class="project-description">AI-powered web app generating personalized tarot readings and daily fortunes using VertexAI, with Firebase backend and hosting.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag ai">VertexAI</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial Recognition -->
+            <div class="project-card fade-in" onclick="openModal('face')">
+                <div class="project-content">
+                    <h3 class="project-title">Facial Recognition</h3>
+                    <p class="project-description">Computer Vision model achieving 94% accuracy using SIFT features, K-means clustering, and K-nearest neighbor classification.</p>
+                    <div class="project-tags">
+                        <span class="project-tag ai">OpenCV</span>
+                        <span class="project-tag ai">scikit-learn</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PantryPal -->
+            <div class="project-card fade-in" onclick="openModal('pantry')">
+                <div class="project-content">
+                    <h3 class="project-title">PantryPal</h3>
+                    <p class="project-description">Java desktop app using OpenAI APIs (GPT, DALL-E) to transcribe ingredients and generate recipe suggestions with images.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag ai">OpenAI API</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python IDLE -->
+            <!-- <div class="project-card fade-in" onclick="openModal('python')">
+                <div class="project-content">
+                    <h3 class="project-title">Python IDLE Multi-tab</h3>
+                    <p class="project-description">Enhanced Python's built-in IDE with multi-tab functionality, improving navigation and file management workflow.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Tkinter</span>
+                        <span class="project-tag">Open Source</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- OCR App -->
+            <div class="project-card fade-in" onclick="openModal('ocr')">
+                <div class="project-content">
+                    <h3 class="project-title">OCR Android App</h3>
+                    <p class="project-description">Android application using Google ML Kit for text recognition and barcode/QR code scanning from camera or gallery.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Android</span>
+                        <span class="project-tag ai">ML Kit</span>
+                        <span class="project-tag">Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TicTacToe -->
+            <div class="project-card fade-in" onclick="openModal('ttt')">
+                <div class="project-content">
+                    <h3 class="project-title">TicTacToe Android App</h3>
+                    <p class="project-description">Android app of classic TicTacToe game with winner/tie detection and intuitive UI.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Android</span>
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">XML Layouts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Spam Filter -->
+            <div class="project-card fade-in" onclick="openModal('spam')">
+                <div class="project-content">
+                    <h3 class="project-title">Email Spam Filter</h3>
+                    <p class="project-description">Neural network model with 96% accuracy for spam classification using TensorFlow and bag-of-words vectorization.</p>
+                    <div class="project-tags">
+                        <span class="project-tag ai">TensorFlow</span>
+                        <span class="project-tag ai">Neural Networks</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
+        <p>&copy; 2025 Arian Torshizi. All rights reserved.</p>
+    </footer> -->
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <!-- Modal content will be inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
