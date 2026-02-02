@@ -167,18 +167,19 @@ const modals = {
         content: `
             <p>Designed a custom application-specific integrated circuit (ASIC) for a Viterbi encoder and decoder on a 9-bit system. The instruction set architecture (ISA) was designed with a total of 8 instructions taking up 3 bits, with remaining bits depending on instruction type.</p>
             <div class="modal-images-tall">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/isa.png" alt="ASIC">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/op1.png" alt="ASIC">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/op2.png" alt="ASIC">
+                <img src="Screenshots/asic/isa.png" alt="ASIC">
+                <img src="Screenshots/asic/op1.png" alt="ASIC">
+                <img src="Screenshots/asic/op2.png" alt="ASIC">
             </div>
             <p>A custom assembler was created in Python that translated assembly code written in the custom ISA to machine code loaded into instruction ROM. Machine modules were coded in SystemVerilog, simulated in ModelSim, and synthesized in Quartus.</p>
             <div class="modal-images-tall">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/overview.png" alt="ASIC">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/alu.png" alt="ASIC">
-                <img src=".https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC/decoder-example.png" alt="ASIC">
+                <img src="Screenshots/asic/overview.png" alt="ASIC">
+                <img src="Screenshots/asic/alu.png" alt="ASIC">
+                <img src="Screenshots/asic/decoder-example.png" alt="ASIC">
             </div>
             <p>Above shows an overview of the machine architecture, the ALU module design, and a brief section of the decoder written in the custom ISA.</p>
         `,
+        hideLink: true,
         link: 'https://github.com/atorshizi/Personal_Projects/tree/main/Custom%20ASIC'
     },
     mac: {
@@ -247,11 +248,12 @@ const modals = {
             <p>Created a face recognition pipeline to match pictures to people. Interest points were extracted using both uniform and edge sampling with OpenCV's Harris corner detector. Patches around interest points were extracted using regular patch feature extraction and SIFT feature extraction.</p>
             <p>A "visual vocabulary" was created using K-means clustering with scikit-learn's KMeans model fitted on training data features. The cluster centers were used to obtain feature vectors for each image. A K-nearest neighbor classifier was used with k=3 and k=5. Feature dimension was 128 with 50 clusters for k-means.</p>
             <div class="modal-images">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Face%20Recognition/1.png" alt="Face Recognition">
-                <img src="https://github.com/atorshizi/Personal_Projects/tree/main/Face%20Recognition/results.png" alt="Face Recognition">
+                <img src="Screenshots/face/1.png" alt="Face Recognition">
+                <img src="Screenshots/face/results.png" alt="Face Recognition">
             </div>
             <p>The best accuracy score was achieved with k=5, uniform sampling, and SIFT feature detection, reaching 94% accuracy.</p>
         `,
+        hideLink: false,
         link: 'https://github.com/atorshizi/Personal_Projects/tree/main/Face%20Recognition'
     },
     spam: {
