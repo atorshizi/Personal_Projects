@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-raised: #222228;
+      --border: #2a2a32;
+      --text: #f4f4f5;
+      --text-secondary: #71717a;
+      --accent: #6366f1;
+      --accent-secondary: #a855f7;
+      --success: #22c55e;
+      --error: #ef4444;
+    }
+
+    body {
+      font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 940px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.35rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.25s ease;
+    }
+
+    .status.connected {
+      color: var(--success);
+      border-color: rgba(34, 197, 94, 0.3);
+      background: rgba(34, 197, 94, 0.1);
+    }
+
+    .status.error {
+      color: var(--error);
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status.connected .status-dot {
+      box-shadow: 0 0 8px currentColor;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.9); }
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .canvas-wrapper {
+      padding: 24px;
+      position: relative;
+      background: 
+        radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+        var(--bg);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      font-size: 0.8rem;
+      background: var(--surface-raised);
+      border-top: 1px solid var(--border);
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .value {
+      font-weight: 600;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+      min-width: 28px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .controls {
+        width: 100%;
+      }
+
+      .canvas-wrapper {
+        padding: 16px;
+      }
+
+      .info-bar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .stat {
+        gap: 16px;
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="14" width="3" height="6" rx="1"/>
+            <rect x="8" y="10" width="3" height="10" rx="1"/>
+            <rect x="13" y="6" width="3" height="14" rx="1"/>
+            <rect x="18" y="2" width="3" height="18" rx="1"/>
+          </svg>
+        </div>
+        <h1>Frequency Analyzer</h1>
+      </div>
+      <div class="controls">
+        <div class="status" id="status">
+          <span class="status-dot"></span>
+          <span id="status-text">Connecting...</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="canvas-wrapper">
+        <canvas id="canvas" width="960" height="340"></canvas>
+      </div>
+      <div class="info-bar">
+        <div class="stat">
+          <div class="stat-item">
+            <span class="label">Bins</span>
+            <span class="value" id="bins">62</span>
+          </div>
+          <div class="divider"></div>
+          <div class="stat-item">
+            <span class="label">FPS</span>
+            <span class="value" id="fps">--</span>
+          </div>
+          <div class="divider"></div>
+          <div class="stat-item">
+            <span class="label">Peak</span>
+            <span class="value" id="peak">--</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>ESP32-based FFT Analyzer via MQTT</footer>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const statusEl = document.getElementById('status');
+    const statusText = document.getElementById('status-text');
+    const fpsEl = document.getElementById('fps');
+    const peakEl = document.getElementById('peak');
+    const binsEl = document.getElementById('bins');
+
+    // FFT parameters (from ESP32 code) 
+    const SAMPLE_RATE = 12000;
+    const SAMPLES = 128;
+    const NUM_BINS = 62;  // SAMPLES/2 - 2 (skipping DC)
+    
+    const freqPerBin = SAMPLE_RATE / SAMPLES;  // ~93.75 Hz per bin
+    
+    const PADDING_BOTTOM = 40;
+    const PADDING_LEFT = 0;
+    const graphHeight = canvas.height - PADDING_BOTTOM;
+    const graphWidth = canvas.width - PADDING_LEFT;
+    const barWidth = graphWidth / NUM_BINS;
+    const barGap = 4;
+
+    let frameCount = 0;
+    let lastTime = performance.now();
+    
+    setInterval(() => {
+      const now = performance.now();
+      const fps = Math.round(frameCount / ((now - lastTime) / 1000));
+      fpsEl.textContent = fps;
+      frameCount = 0;
+      lastTime = now;
+    }, 1000);
+
+    const gradient = ctx.createLinearGradient(0, graphHeight, 0, 0);
+    gradient.addColorStop(0, '#6366f1');
+    gradient.addColorStop(0.6, '#a855f7');
+    gradient.addColorStop(1, '#ec4899');
+
+    let smoothedHeights = new Array(NUM_BINS).fill(0);
+    const smoothing = 0.9;
+
+    const mqttTopic = 'spectrum/arian-esp32'; 
+    const client = mqtt.connect('wss://broker.hivemq.com:8884/mqtt');
+
+    client.on('connect', () => {
+      console.log('Connected to MQTT broker');
+      statusEl.className = 'status connected';
+      statusText.textContent = 'Connected';
+      client.subscribe(mqttTopic);
+    });
+
+    client.on('error', (err) => {
+      console.error('MQTT error:', err);
+      statusEl.className = 'status error';
+      statusText.textContent = 'Error';
+    });
+
+    client.on('offline', () => {
+      statusEl.className = 'status error';
+      statusText.textContent = 'Offline';
+    });
+
+    client.on('reconnect', () => {
+      statusEl.className = 'status';
+      statusText.textContent = 'Reconnecting...';
+    });
+
+    client.on('message', (topic, message) => {
+      // Convert the buffer to Int32Array
+      const heights = new Int32Array(message.buffer.slice(message.byteOffset, message.byteOffset + message.byteLength));
+      binsEl.textContent = heights.length;
+      
+      let peak = 0;
+      for (let i = 0; i < heights.length; i++) {
+        if (heights[i] > peak) peak = heights[i];
+        smoothedHeights[i] += (heights[i] - smoothedHeights[i]) * smoothing;
+      }
+      peakEl.textContent = peak;
+      
+      draw(smoothedHeights);
+      frameCount++;
+    });
+
+    function formatFreq(hz) {
+      if (hz >= 1000) {
+        return (hz / 1000).toFixed(1) + 'k';
+      }
+      return Math.round(hz).toString();
+    }
+
+    function draw(heights) {
+      ctx.fillStyle = '#0f0f12';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const actualBarWidth = barWidth - barGap;
+      const cornerRadius = 4;
+
+      for (let i = 0; i < heights.length; i++) {
+        const h = Math.max(6, heights[i] * 1.35);
+        const x = PADDING_LEFT + i * barWidth + barGap / 2;
+        const y = graphHeight - h;
+
+        ctx.shadowColor = '#6366f1';
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 4;
+        
+        ctx.beginPath();
+        ctx.roundRect(x, y, actualBarWidth, h, [cornerRadius, cornerRadius, 0, 0]);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetY = 0;
+      }
+
+      ctx.fillStyle = '#71717a';
+      ctx.font = '11px Instrument Sans, sans-serif';
+      ctx.textAlign = 'center';
+
+      const freqLabels = [0, 1000, 2000, 3000, 4000, 5000, 6000];
+      
+      freqLabels.forEach(freq => {
+        const binIndex = Math.round(freq / freqPerBin) - 2;
+        
+        if (binIndex >= 0 && binIndex < NUM_BINS) {
+          const x = PADDING_LEFT + binIndex * barWidth + barWidth / 2;
+          ctx.fillStyle = '#3a3a42';
+          ctx.fillRect(x - 0.5, graphHeight, 1, 6);
+          
+          ctx.fillStyle = '#71717a';
+          ctx.fillText(formatFreq(freq), x, graphHeight + 24);
+        }
+      });
+
+      ctx.fillStyle = '#52525b';
+      ctx.font = '10px Instrument Sans, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText('Hz', canvas.width - 8, graphHeight + 24);
+    }
+
+    draw(smoothedHeights);
+  </script>
+</body>
+</html>

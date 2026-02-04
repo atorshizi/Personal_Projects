@@ -50,6 +50,30 @@ const modals = {
         `,
         link: 'https://github.com/jlab-sensing/tock/tree/ents-sdi12-transmit'
     },
+    fft: {
+        title: 'Real-Time Audio Spectrum Analyzer',
+        content: `
+            <p>Built a real-time audio spectrum analyzer using an ESP32 microcontroller and I2S MEMS microphone. Implemented the Cooley-Tukey FFT algorithm in C++ with support for both Hamming and Hann window functions to reduce spectral leakage.</p>
+
+            <p>Audio is sampled at 12 kHz with 128 samples per frame, yielding 62 usable frequency bins (after discarding DC offset) at approximately 94 Hz resolution. The computed spectrum is displayed locally on a TFT screen and streamed to a web dashboard via MQTT for remote monitoring.</p>    
+            
+            <div class="modal-images">
+                <img src="Screenshots/Frequency/static.jpg" alt="ESP32 board with TFT showing background noise">
+            </div>
+            <p>Above shows the physical setup: an ESP32 with I2S microphone and TFT display showing the spectrum of ambient background noise displayed locally.</p>
+            
+            <p>Simultaneously, the bar height data is published over WiFi to a public MQTT broker (HiveMQ), enabling real-time remote monitoring from any device with internet access.</p>
+            
+            <div class="modal-images">
+                <img src="Screenshots/Frequency/tones.jpg" alt="TFT display showing two tone peaks">
+                <img src="Screenshots/Frequency/website.png" alt="Web visualizer showing matching peaks">
+            </div>
+            <p>Above demonstrates the system detecting two simultaneous tones at 2 kHz and 5 kHz. The left image shows the TFT display on the ESP32, while the right shows the web visualizer receiving the same data via MQTT.</p>
+            
+            <p>The web visualizer is a standalone HTML/JavaScript application that connects to the MQTT broker via WebSocket protocol. It features live stats including FPS and peak magnitude.</p>
+        `,
+        link: 'https://github.com/atorshizi/Personal_Projects/tree/main/Frequency%20Analyzer'
+    },
     cloud: {
         title: 'CloudImage',
         content: `
