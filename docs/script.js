@@ -277,7 +277,7 @@ const modals = {
             </div>
             <p>The best accuracy score was achieved with k=5, uniform sampling, and SIFT feature detection, reaching 94% accuracy.</p>
         `,
-        hideLink: false,
+        hideLink: true,
         link: 'https://github.com/atorshizi/Personal_Projects/tree/main/Face%20Recognition'
     },
     spam: {
